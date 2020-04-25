@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import '../css/code.css';
-
-
+import './css/code.css';
 
 
 function setData(){
   var codec = "(define (as) (display \"Hola lulu\" ))" +" (as)";
   document.getElementById('input1').value = codec;
 
-  document.getElementById('output1').value = codec;
 
 }
 
 export default class codeCompiler extends Component {
-  render() {
+  render(){
     return (
       <div className="code">
           <header className="code-header">
@@ -43,7 +40,7 @@ export default class codeCompiler extends Component {
               <Button variant="outlined" color="primary" onClick= { setData } >
                 Run Code
               </Button>
-            </div>     
+            </div>   
           </div>
       </div>
     )

@@ -13,7 +13,7 @@ function Home() {
         <div className="Home--body__classes">
           {data.map(function (element) {
             return (
-              <Card title={element.title} description={element.description} />
+              <Card title={element.title} description={element.description} img={element.img} />
             );
           })}
         </div>
