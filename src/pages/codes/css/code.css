@@ -2,22 +2,8 @@
     text-align: center;
 }
 
-.code-TextArea {
-    width: 600%;
-    height: 400px;
-    cursor: not-allowed;
-    resize: none;
-}
-
-.code-TextArea-2 {
-    width: 600%;
-    height: 100px;
-    cursor: not-allowed;
-    resize: none;
-}
-
 .code-header {
-    background-color: #f4f8f6;
+    background-color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -27,49 +13,47 @@
     color: rgb(82, 82, 82);
 }
 
-.code-container {
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
+.div-container {
+    overflow: scroll;
+    cursor: text;
+    min-height: 200px;
+    max-height: 350px;
+    border: gray 1px solid;
 }
 
-.code-container > div {
-    width: 10%;
+*::selection {
+    background-color: rgb(0, 0, 0,0);
+    color: rgb(0, 0, 0,0);
+}
+ 
+*::-moz-selection {
+    background-color:rgb(0, 0, 0,0);
+    color: rgb(0, 0, 0, 0);
+}
+
+
+.code-container{
     padding: 10px;
 }
 
-.code-container > div:first-child {
-    margin-right: 500px;
-    margin-left: -150px;
 
+.code-container > div{
+    
+    float:left;
+    margin: 30px;
+    margin-bottom: 5px;
 }
 
-.code-boton{
-    text-decoration: none;
+.button-container{
     padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #1883ba;
-    border-radius: 6px;
-    border: 2px solid #0016b0;
-  }
+}
 
-  textarea {
-    border: 1px solid rgba(73, 73, 73, 0.5);
-    border-radius: 3px;
-    font-family: "Source Code Pro", monospace;
-    font-size: 13px;
-    line-height: 20px;
-    padding: 4px;
-  }
-  
-  .CodeMirror {
-    border: 1px solid rgba(73, 73, 73, 0.2);
-    border-radius: 3px;
-    color: #4a4a4a;
-    font-family: "Source Code Pro", monospace;
-    font-size: 13px;
-    line-height: 20px;
-    height: 600px;
-  }
+
+.button-container > div{
+    
+    float:left;
+    margin: 180px;
+    margin-top: 5px;
+}
+
+

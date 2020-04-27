@@ -1,45 +1,46 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import img1 from '../../assets/img/condicionales/racket/condicionales6.JPG';
+import img2 from '../../assets/img/condicionales/c/condicionales6.JPG';
+import logo from '../../assets/img/images.jpg';
 import './css/code.css';
 
 
+
 function setData(){
-  var codec = "(define (as) (display \"Hola lulu\" ))" +" (as)";
-  document.getElementById('input1').value = codec;
-
-
+  
 }
 
 export default class codeCompiler extends Component {
   render(){
     return (
       <div className="code">
-          <header className="code-header">
-            <div>
-              <h2>Aqui el texto de la ventana</h2>
-            </div>
-          </header>
           <div className="code-header">
+            <img src={ logo }></img>
             <div className="code-container">
-              <div>
-                <textarea className="code-TextArea" id = "input1" readOnly></textarea>
+              <div className="div-container">
+                <img src={img1}></img>
               </div>
-              <div>
-                <textarea className="code-TextArea" id = "input2" readOnly></textarea> 
+              <div className="div-container">
+                <img src={img2}></img>
               </div>
             </div>
-            <div className="code-container">
+            <div className="button-container">
               <div>
-                <textarea className="code-TextArea-2" id = "output1" readOnly></textarea>
+                <Button variant="outlined" color="primary" onClick= { setData } >
+                  Ejecutar Codigo
+                </Button>
               </div>
               <div>
-                <textarea className="code-TextArea-2" id = "output2" readOnly></textarea> 
+                <Button variant="outlined" color="primary" onClick= { setData } >
+                  Comparar Codigos
+                </Button>
               </div>
-            </div>
-            <div>
-              <Button variant="outlined" color="primary" onClick= { setData } >
-                Run Code
-              </Button>
+              <div>
+                <Button variant="outlined" color="primary" onClick= { setData } >
+                  Ejecutar Code
+                </Button>
+              </div>
             </div>   
           </div>
       </div>
