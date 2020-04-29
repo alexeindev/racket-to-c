@@ -3,7 +3,7 @@ import './Home.scss';
 import Card from '../../components/Card/Card';
 import data from '../../assets/data/card-info.json';
 import Navbar from '../../components/Navbar/Navbar';
-import images from '../../components/Card/images';
+
 function Home() {
   return (
     <div className="Home">
