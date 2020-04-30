@@ -10,11 +10,10 @@ function Router() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Start} />
         <Route path="/menu" component={Home} />
         <Route path="/compiller" component={Compiller} />
         <Route path="/practice" component={Practices} />
-        <Route path="/start" component={Start} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

@@ -31,7 +31,7 @@ function Start() {
             poder obtener un mejor entendimiento de los temas que va a ver en el
             modulo al que desea entrar.
           </p>
-          <a href="/" className="btn btn-outline-primary" position="center">
+          <a href="/menu" className="btn btn-outline-primary" position="center">
             ¡Aprender más!
           </a>
         </div>
