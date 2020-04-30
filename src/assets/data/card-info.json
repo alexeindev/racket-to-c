@@ -1,7 +1,7 @@
 [
   {
     "title": "1. Expresiones",
-    "description": "En esta sección a realizar operaciones lógicas y aritméticas de forma sencilla en C, a partir del lenguaje Racket",
+    "description": "En esta sección a realizar operaciones\n lógicas y aritméticas de forma sencilla en C, a partir del lenguaje Racket",
     "img": "/static/media/operadores.7aecea79.jpeg",
     "page": "/",
     "state": ""
@@ -10,7 +10,7 @@
     "title": "2. Condicionales",
     "description": "En esta sección asimilarás el uso de las instrucciones condicionales básicas de C como el if y switch, a partir del lenguaje Racket.",
     "img": "/static/media/condicionales.16fc2d85.jpg",
-    "page": "/",
+    "page": "/compiller",
     "state": ""
   },
   {

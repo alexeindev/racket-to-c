@@ -70,7 +70,7 @@ export default class practicas extends Component {
                 <MonacoEditor 
                     width="600" 
                     height="400" 
-                    language="C++"  
+                    language="javascript"  
                     theme="vs-dark"
                     value={code} 
                     options={options}
