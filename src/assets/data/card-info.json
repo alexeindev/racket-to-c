@@ -2,85 +2,85 @@
   {
     "title": "1. Expresiones",
     "description": "En esta sección a realizar operaciones lógicas y aritméticas de forma sencilla en C, a partir del lenguaje Racket",
-    "img": "../../assets/img/menu/cadenas.jpg",
-    "page": "",
+    "img": "/static/media/operadores.7aecea79.jpeg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "2. Condicionales",
     "description": "En esta sección asimilarás el uso de las instrucciones condicionales básicas de C como el if y switch, a partir del lenguaje Racket.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/condicionales.16fc2d85.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "3. Estructuras de repetición",
     "description": "Esta sección compara y explica el funcionamiento de las estructuras de repetición: while do/while y for en lenguaje C, a partir del lenguaje Racket.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/ciclos.0b84bddd.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "4. Caracteres",
     "description": "En esta sección te ilustrarás sobre los caracteres en C y como usarlos, comparando con Racket su estructura.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/caracteres.66e16c0e.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "5. Cadenas",
     "description": "En esta sección entenderás el uso, declaración e inicialización de cadenas en C, además, aprenderás las funciones para su manejo, comparando con Racket su estructura.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/cadenas.77d4fcdb.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "6. Vectores",
     "description": "En esta sección aprenderás cómo crear, inicializar y modificar vectores en C, comparando con Racket su estructura",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/vectores.a353216a.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "7. Estructuras de datos",
     "description": "En esta sección abarcarás qué son las estructuras de datos; cómo crearlas y operarlas.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/estructuras.bc424037.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "8. Funciones",
     "description": "En esta sección conseguirás entender la forma correcta de definir y llamar funciones en C a partir del lenguaje Racket.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/funciones .e7b20f45.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "9. Procedimientos",
     "description": "En esta sección aprenderás como crear y usar procedimientos en C a partir del lenguaje Racket.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/procedimientos.4a98ef51.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "10. Recursividad",
     "description": "En esta sección descubrirás qué es la recursividad, cómo implementarla de forma sencilla C, a partir del lenguaje Racket.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/recursion.31f2c651.png",
+    "page": "/",
     "state": ""
   },
   {
     "title": "11. Modo gráfico",
     "description": "En esta sección profundizarás en funciones que te sirvan para crear entornos gráficos básicos como figuras hasta llegar a los fundamentos del desarrollo de videojuegos.",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/grafico.2d902eba.jpg",
+    "page": "/",
     "state": ""
   },
   {
     "title": "12. Practica",
     "description": "En esta sección final harás una pequeña prueba para validar el conocimiento adquirido,¡Mucha suerte!",
-    "img": "../../assets/img/expresiones2.jpg",
-    "page": "",
+    "img": "/static/media/practicas.fecb7881.jpg",
+    "page": "/practice",
     "state": ""
   }
 ]

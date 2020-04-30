@@ -21,16 +21,6 @@
     border: gray 1px solid;
 }
 
-*::selection {
-    background-color: rgb(0, 0, 0,0);
-    color: rgb(0, 0, 0,0);
-}
- 
-*::-moz-selection {
-    background-color:rgb(0, 0, 0,0);
-    color: rgb(0, 0, 0, 0);
-}
-
 
 .code-container{
     padding: 10px;
@@ -40,7 +30,7 @@
 .code-container > div{
     
     float:left;
-    margin: 30px;
+    margin: 200px;
     margin-bottom: 5px;
 }
 
