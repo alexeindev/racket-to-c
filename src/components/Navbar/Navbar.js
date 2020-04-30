@@ -4,7 +4,7 @@ import logo from '../../assets/img/logo.png';
 class Navbar extends Component {
   render() {
     return (
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="/">
           <img src={logo} class="d-inline-block align-top" alt="" width="30" />{' '}
           Racket a C
