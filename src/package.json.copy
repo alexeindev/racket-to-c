@@ -33,10 +33,10 @@
     "reactjs-popup": "^1.5.0"
   },
   "scripts": {
-    "start": "rescripts start",
-    "build": "rescripts build",
-    "test": "rescripts test",
-    "eject": "rescripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,14 +54,10 @@
     ]
   },
   "devDependencies": {
-    "rescripts": "rescript-monaco",
     "@rescripts/cli": "0.0.14",
     "@rescripts/utilities": "0.0.7",
     "json-loader": "0.5.7",
     "monaco-editor-webpack-plugin": "^1.9.0",
     "react-app-rewired": "^2.1.5"
-  },
-  "rescripts": [
-    "rescript-monaco"
-  ]
+  }
 }
