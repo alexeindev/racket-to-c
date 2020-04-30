@@ -11,6 +11,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/menu" component={Home} />
         <Route path="/compiller" component={Compiller} />
         <Route path="/practice"  component={Practices} />
         <Route component={NotFound} />
