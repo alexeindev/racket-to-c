@@ -4,15 +4,20 @@ import logo from '../../assets/img/logo.png';
 class Navbar extends Component {
   render() {
     return (
-      <nav class="navbar navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="/">
-          <img src={logo} class="d-inline-block align-top" alt="" width="30" />{' '}
+      <nav className="navbar navbar-dark bg-dark sticky-top">
+        <a className="navbar-brand" href="/">
+          <img
+            src={logo}
+            className="d-inline-block align-top"
+            alt=""
+            width="30"
+          />{' '}
           Racket a C
         </a>
-        <div class="navbar-nav-scroll">
-          <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-              <a class="nav-link " href="/">
+        <div className="navbar-nav-scroll">
+          <ul className="navbar-nav bd-navbar-nav flex-row">
+            <li className="nav-item">
+              <a className="nav-link " href="/">
                 Inicio
               </a>
             </li>
