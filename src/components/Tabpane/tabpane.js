@@ -87,13 +87,13 @@ export default function ScrollableTabsButtonAuto() {
       <TabPanel value={value} index={0}>
         <div>
           <FormControl component = "fieldset">
-          <FormLabel component = "legend"> 
+            <FormLabel component = "legend"> 
               <div className = "description">
-              <p className="Color-green">Ejercicio 1</p>
-              Transformar en código el pseudocódigo que se muestra a continuación, correspondiente a 
-              proporcionar el precio medio de un producto, calculado a partir del precio del mismo en 
-              tres establecimientos distintos. Los precios para el cálculo son introducidos por el 
-              usuario.
+                <p className="Color-green">Ejercicio 1</p>
+                Transformar en código el pseudocódigo que se muestra a continuación, correspondiente a 
+                proporcionar el precio medio de un producto, calculado a partir del precio del mismo en 
+                tres establecimientos distintos. Los precios para el cálculo son introducidos por el 
+                usuario.
               </div>
               <div>
                 <ul>
@@ -171,7 +171,6 @@ export default function ScrollableTabsButtonAuto() {
                 el pseudocódigo que se muestra a continuación en código C y comprobar que el programa 
                 obtiene los resultados esperados para una serie de casos de prueba.
                 Aqui te dejo una ayudita. ¡buena suerte!
-                
                 <img src={img}/>
               </div>
             </FormLabel>
@@ -179,7 +178,33 @@ export default function ScrollableTabsButtonAuto() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item 4
+        <FormControl component = "fieldset">
+          <FormLabel component = "legend"> 
+            <div className = "description">
+              <p className="Color-green">Ejercicio 1</p>
+              Una ONG tiene puntos de reparto de vacunas que se pretende funcionen de la siguiente manera.
+              Cada día, empezar con 1000 vacunas disponibles y a través de un programa que controla las 
+              entregas avisar si el inventario baja de 200 unidades.
+            </div>
+          </FormLabel>
+          <FormLabel component = "legend"> 
+            <div className = "description">
+              <p className="Color-yellow">Ejercicio 2</p>
+              Diseñe un algoritmo que lea un número de tres cifras y determine si es igual al revés del 
+              número. 
+              Como el número tiene tres cifras, para que sea igual al revés, basta con que la 
+              cifra de las unidades sea igual a la cifra de las centenas. Por ejemplo: 353, 878, etc.
+            </div>
+          </FormLabel>
+          <FormLabel component = "legend"> 
+            <div className = "description">
+              <p className="Color-red">Ejercicio 3</p>
+              Crea un programa que usando bucles nos permita pedir un número par comprendido entre 100 y
+              200 y nos muestre todos los números pares comprendidos entre el número facilitado y 200. 
+              Por ejemplo si el número facilitado es 192 nos debería mostrar 192, 194, 196, 198 y 200.
+            </div>
+          </FormLabel>
+        </FormControl>
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item 5
