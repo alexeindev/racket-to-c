@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
 import Navbar from '../../components/Navbar/Navbar';
 import Tabs from '../../components/Tabpane/tabpane';
-import Editor from '../../components/Editor/EditorC';
+import Editor from '../../components/TabCode/TabCode';
 import './css/editor.css';
 
 
@@ -29,15 +28,7 @@ export default class practicas extends Component {
           <div className="code-editor">
             <div className="editor-container">
               <div>
-                <div className="monaco-theme">
-                  <Editor/>
-                </div>
-                <div>
-                  <textarea id = "output" className = "text-area" placeholder="output" disabled/>
-                </div>
-                <Button variant="outlined" color="primary">
-                  Run
-                </Button>
+                <Editor/>
               </div>
                 <Tabs></Tabs>
             </div>
