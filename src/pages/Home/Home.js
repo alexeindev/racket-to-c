@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card/Card.jsx';
 import data from '../../assets/data/card-info.json';
 import Navbar from '../../components/Navbar/Navbar';
 
@@ -20,6 +20,7 @@ function Home() {
                 description={element.description}
                 img={element.img}
                 page={element.page}
+                difficulty={element.difficulty}
               />
             );
           })}

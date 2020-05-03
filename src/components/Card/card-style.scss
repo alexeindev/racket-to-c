@@ -27,3 +27,14 @@ body {
 .navbar {
   position: fixed;
 }
+
+.diff-label {
+  width: 120px;
+  height: 28px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-left: 1.9rem;
+}
