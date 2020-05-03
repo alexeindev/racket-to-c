@@ -70,12 +70,12 @@ export default function ScrollableTabsButtonAuto() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab  label="Ejemplo 1" {...a11yProps(0)} />
-          <Tab label="Ejemplo 2" {...a11yProps(1)} />
-          <Tab label="Ejemplo 3" {...a11yProps(2)} />
-          <Tab label="Ejemplo 4" {...a11yProps(3)} />
-          <Tab label="Ejemplo 5" {...a11yProps(4)} />
-          <Tab label="Ejemplo 6" {...a11yProps(5)} />
+          <Tab  label=" Ejemplo 1" {...a11yProps(0)} />
+          <Tab label=" Ejemplo 2" {...a11yProps(1)} />
+          <Tab label=" Ejemplo 3" {...a11yProps(2)} />
+          <Tab label=" Ejemplo 4" {...a11yProps(3)} />
+          <Tab label=" Ejemplo 5" {...a11yProps(4)} />
+          <Tab label=" Ejemplo 6" {...a11yProps(5)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -86,62 +86,62 @@ export default function ScrollableTabsButtonAuto() {
         <TabPanel value={value} index={0}>
             <div className="code-container">
                 <div >
-                    <Editor1 code = {";this is \n;the code"} example={ 1 } />
+                    <Editor1 code = {data[0]['1']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2 code = {data[0]['1']['codigo']} outs = {data[0]['1']['out']}/>
+                    <Editor2 code = {data[1]['1']['codigo']}/>
                 </div>
             </div>    
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="code-container">
+          <div className="code-container">
                 <div >
-                    <Editor1/>
+                    <Editor1 code = {data[0]['2']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2 code = {"//this is \n//the code"} example={ 2 }/>
+                    <Editor2 code = {data[1]['2']['codigo']}/>
                 </div>
-            </div>    
+            </div>   
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
             <div className="code-container">
                 <div >
-                    <Editor1/>
+                    <Editor1 code = {data[0]['3']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2/>
+                    <Editor2 code = {data[1]['3']['codigo']}/>
                 </div>
-            </div>    
+            </div>   
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
             <div className="code-container">
                 <div >
-                    <Editor1/>
+                    <Editor1 code = {data[0]['4']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2/>
+                    <Editor2 code = {data[1]['4']['codigo']}/>
                 </div>
-            </div>    
+            </div>   
         </TabPanel>
         <TabPanel value={value} index={4} dir={theme.direction}>
             <div className="code-container">
                 <div >
-                    <Editor1/>
+                    <Editor1 code = {data[0]['5']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2/>
+                    <Editor2 code = {data[1]['5']['codigo']}/>
                 </div>
-            </div>    
+            </div>   
         </TabPanel>
         <TabPanel value={value} index={5} dir={theme.direction}>
             <div className="code-container">
                 <div >
-                    <Editor1/>
+                    <Editor1 code = {data[0]['6']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2/>
+                    <Editor2 code = {data[1]['6']['codigo']}/>
                 </div>
-            </div>    
+            </div>   
         </TabPanel>
       </SwipeableViews>
     </div>

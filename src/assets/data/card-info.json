@@ -17,7 +17,7 @@
     "title": "3. Estructuras de selección",
     "description": "En esta sección asimilarás el uso de las instrucciones condicionales básicas de C como el if y switch, a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297450/condicionales_gpbsxh.jpg",
-    "page": "/compiller",
+    "page": "/compiler",
     "state": ""
   },
   {
