@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
-import img1 from '../../assets/img/condicionales/racket/condicionales6.JPG';
-import img2 from '../../assets/img/condicionales/c/condicionales6.JPG';
-import './css/code.css';
 import Navbar from '../../components/Navbar/Navbar';
+import Ejemplos from '../../components/TabCode/tabcodeexample';
+import './css/code.css';
 
 function setData() {}
 
@@ -14,31 +12,7 @@ export default class codeCompiler extends Component {
         <Navbar></Navbar>
         <div className="code-header">
           <h2>Condicionales</h2>
-          <div className="code-container">
-            <div className="div-container">
-              <img src={img1}></img>
-            </div>
-            <div className="div-container">
-              <img src={img2}></img>
-            </div>
-          </div>
-          <div className="button-container">
-            <div>
-              <Button variant="outlined" color="primary" onClick={setData}>
-                Ejecutar Racket
-              </Button>
-            </div>
-            <div>
-              <Button variant="outlined" color="primary" onClick={setData}>
-                Comparar Codigos
-              </Button>
-            </div>
-            <div>
-              <Button variant="outlined" color="primary" onClick={setData}>
-                Ejecutar C
-              </Button>
-            </div>
-          </div>
+          <Ejemplos/>
         </div>
       </div>
     );

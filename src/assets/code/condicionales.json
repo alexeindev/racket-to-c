@@ -1,0 +1,15 @@
+[
+    {
+        "1" : 
+        {
+            "codigo":"//Escribir un programa que nos diga si un estudiante  aprobó la\n//materia, el programa debe realizar los cálculos en función de \n//los siguientes criterios.\n//a. Apruba si las tres notas suman  3.5 o mas\n//b. Presenta pruba de validacion si la nota estan entre 3 y 3.4\n#include <stdio.h>\nint main()\n{\nint nota;\nprintf(\"ingrese la nota: \");\nscanf(\"%s\", &nota);\nif(nota >= 3.5){\nrintf (\"Aprobó la materia\");\n}else{\nif ((nota >= 3) && (nota < 3.4)){\nprintf (\"Presenta prueba de validación\");\n}else{\nif ((nota >= 0) && (nota < 3)){\nprintf (\"Reprobó la materia\");\n}else{\nprintf (\"ingrese una nota valida\");\n}\n}\n}\n}",
+            "out": "salida 1"
+        },
+
+        "2" : 
+        {
+            "codigo":"//Escribir un programa que nos diga si un estudiante  aprobó la\n//materia, el programa debe realizar los cálculos en función de \n//los siguientes criterios.\n//a. Apruba si las tres notas suman  3.5 o mas\n//b. Presenta pruba de validacion si la nota estan entre 3 y 3.4\n#include <stdio.h>\nint main()\n{\nint nota;\nprintf(\"ingrese la nota: \");\nscanf(\"%s\", &nota);\nif(nota >= 3.5){\nrintf (\"Aprobó la materia\");\n}else{\nif ((nota >= 3) && (nota < 3.4)){\nprintf (\"Presenta prueba de validación\");\n}else{\nif ((nota >= 0) && (nota < 3)){\nprintf (\"Reprobó la materia\");\n}else{\nprintf (\"ingrese una nota valida\");\n}\n}\n}\n}",
+            "out": "salida 2"
+        } 
+    }
+]
