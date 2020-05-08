@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar.jsx';
 import Ejemplos from '../../components/TabCode/tabcodeexample';
 import './css/code.css';
 
@@ -12,7 +12,7 @@ export default class codeCompiler extends Component {
         <Navbar></Navbar>
         <div className="code-header">
           <h2>Condicionales</h2>
-          <Ejemplos/>
+          <Ejemplos />
         </div>
       </div>
     );

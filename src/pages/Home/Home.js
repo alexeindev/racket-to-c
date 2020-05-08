@@ -2,17 +2,14 @@ import React from 'react';
 import './Home.scss';
 import Card from '../../components/Card/Card.jsx';
 import data from '../../assets/data/card-info.json';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar.jsx';
 
 function Home() {
   return (
-    <div className="Home">
+    <div class="Container">
       <Navbar></Navbar>
-      <div className="Home--header">
-        <p className="Home--header__title">Racket a C</p>
-      </div>
-      <div className="Home--body">
-        <div className="Home--body__classes">
+      <div className="Home">
+        <div className="Home__body">
           {data.map(function (element) {
             return (
               <Card

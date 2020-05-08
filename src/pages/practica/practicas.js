@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar.jsx';
 import Tabs from '../../components/Tabpane/tabpane';
 import Editor from '../../components/TabCode/TabCode';
 import './css/editor.css';
 
-
 export default class practicas extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
   }
-    
+
   render() {
     return (
       <div>
@@ -28,9 +27,9 @@ export default class practicas extends Component {
           <div className="code-editor">
             <div className="editor-container">
               <div>
-                <Editor/>
+                <Editor />
               </div>
-                <Tabs></Tabs>
+              <Tabs></Tabs>
             </div>
           </div>
         </div>
@@ -38,5 +37,3 @@ export default class practicas extends Component {
     );
   }
 }
-
-

@@ -1,19 +1,17 @@
 import React from 'react';
 import './Start.scss';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar.jsx';
 import logo from '../../assets/img/logos.png';
 
 function Start() {
   return (
-    <div>
+    <div className="Container">
       <Navbar></Navbar>
-      <div className="Start">
-        <div></div>
-        <div className="Start--info">
-          <h3 className="Start--info__title">
-            GUÍA DE PROGRAMACIÓN EN LENGAJE C
-          </h3>
-          <p className="Start--info__descriprion">
+      <div className="info">
+        <div className="info__text">
+          <h3 className="info__text--title">Guía de programación imperativa</h3>
+          <h3 className="info__text--title">(Racket y C)</h3>
+          <p className="info__text--description">
             Este sitio web tiene como objetivo ser un instrumento que sirva de
             apoyo a los estudiantes de la Universidad Tecnológica de Pereira
             para el aprendizaje del lenguaje de programación C++ a través de
@@ -22,8 +20,8 @@ function Start() {
             que el estudiante podrá mejorar su nivel de absteacción y obtener el
             conocimiento de una manera práctica.
           </p>
-          <h3 className="Start--info__title">INFORMACIÓN ADICIONAL</h3>
-          <p className="Start--info__descriprion">
+          <h3 className="info__text--title">Información Adicional</h3>
+          <p className="info__text--description">
             Este sitio web cuenta con 11 modulos, cada modulo cuenta con
             ejemplos practicos sobre determinados temas, el estudiante es libre
             de escoger a cual modulo quiere ingresar, nuestra recomendación es
@@ -31,12 +29,12 @@ function Start() {
             poder obtener un mejor entendimiento de los temas que va a ver en el
             modulo al que desea entrar.
           </p>
-          <a href="/menu" className="btn btn-outline-primary" position="center">
-            ¡Aprender más!
+          <a href="/menu">
+            <button className="btn">¡Aprende más!</button>
           </a>
         </div>
-        <div className="Start--image">
-          <img src={logo}></img>
+        <div className="info__image">
+          <img src={logo} alt="logos"></img>
         </div>
       </div>
     </div>

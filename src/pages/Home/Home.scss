@@ -2,29 +2,14 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  padding-top: 40px;
   /*La dirección por defecto de flex es row*/
   flex-direction: column;
-  &--header {
-    width: 100%;
-    height: 20%;
+
+  &__body {
+    padding-right: 30px;
     display: flex;
-    /* Cuando flex está en modo row para centrar horizontalmente utilizo justify-content: center y para centrar verticalmente align-items: center. Pero cuando está en modo columna esto se invierte.*/
-    justify-content: center;
-    align-items: center;
-    &__title {
-      font-size: 35px;
-      margin: 200px;
-      padding: 0;
-    }
-  }
-  &--body {
-    width: 100%;
-    height: 80%;
-    margin: 0;
-    &__classes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
