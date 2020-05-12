@@ -11,7 +11,7 @@ export default class practicas extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Container">
         <Navbar></Navbar>
         <div className="practice-container">
           <div className="information">

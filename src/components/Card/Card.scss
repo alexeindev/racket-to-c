@@ -1,0 +1,41 @@
+.Card {
+  width: 318px;
+  height: 418px;
+  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 318px;
+    height: 180px;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  &__text {
+    width: 316px;
+    height: 180px;
+    border-radius: 0px 0px 16px 16px;
+    padding: 20px;
+
+    &--title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &--description {
+      font-weight: ligth;
+    }
+  }
+
+  &__link {
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}

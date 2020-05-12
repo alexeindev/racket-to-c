@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './card-style.scss';
+import './Card.scss';
 
 class Card extends Component {
-  getLabelColor(difficulty) {
+  /*   getLabelColor(difficulty) {
     switch (difficulty) {
       case 'Principiante':
         return '#8cba51';
@@ -12,25 +12,25 @@ class Card extends Component {
         return '#c9485b';
     }
   }
-
+ */
   render() {
     return (
-      <div className="card text-center overflow ">
-        <img className="card-img-top" src={this.props.img} alt="Clases" />
-        <div className="card-body text-dark">
-          <h4 className="card-title title-align">{this.props.title}</h4>
-          <div
+      <div className="Card">
+        <img className="Card__img" src={this.props.img} alt="Clases" />
+        <div className="Card__text">
+          <h4 className="Card__text--title">{this.props.title}</h4>
+          {/* <div
             className="diff-label"
             style={{
               backgroundColor: this.getLabelColor(this.props.difficulty),
             }}
           >
             {this.props.difficulty}
-          </div>
-          <p className="card-text text-secondary">{this.props.description}</p>
-          <a href={this.props.page} className="btn btn-outline-primary">
-            Iniciar tema
-          </a>
+          </div> */}
+          <p className="Card__text--description">{this.props.description}</p>
+        </div>
+        <div className="Card__link">
+          <a href={this.props.page}>Iniciar tema</a>
         </div>
       </div>
     );

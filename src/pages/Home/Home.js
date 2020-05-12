@@ -9,19 +9,17 @@ function Home() {
     <div class="Container">
       <Navbar></Navbar>
       <div className="Home">
-        <div className="Home__body">
-          {data.map(function (element) {
-            return (
-              <Card
-                title={element.title}
-                description={element.description}
-                img={element.img}
-                page={element.page}
-                difficulty={element.difficulty}
-              />
-            );
-          })}
-        </div>
+        {data.map(function (element) {
+          return (
+            <Card
+              title={element.title}
+              description={element.description}
+              img={element.img}
+              page={element.page}
+              difficulty={element.difficulty}
+            />
+          );
+        })}
       </div>
     </div>
   );
