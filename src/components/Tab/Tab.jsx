@@ -26,7 +26,7 @@ class Tab extends Component {
           <i class="fa fa-sitemap"></i> Ejercicio 6
         </button>
         <div>
-          <Editor1 ejemplo = {1} module = {'condicionalB'}/>
+          <Editor1 ejemplo = {1} module = {'condicionales'}/>
         </div>
       </div>
     );

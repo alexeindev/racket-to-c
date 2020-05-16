@@ -1,6 +1,6 @@
 [
     {
-        "condicional":
+        "condicionales":
         {
             "1" : 
             {
@@ -25,10 +25,7 @@
             "6" : 
             {
                 "codigo":";Escribir un programa que calcule el sueldo que le corresponde al \n;trabajador de una empresa que cobra 40.000  dólares  anuales, el \n;programa debe realizar los cálculos en función de los siguientes \n;criterios.\n;a.Si lleva más de 15 años en la empresa obtiene un aumento del 12%.\n;b.Si lleva más de 10  y menos de 15 años obtiene un aumento del 8%.\n;c.Si lleva más de  5  y menos de 10 años obtiene un aumento del 5%.\n;d.  Si lleva menos de 5 años se le aplica un aumento del 3%.\n(define (salario)\n\t(printf \"seleccione una opcion\")\n\t(printf \"1. Calcular sueldo anual\")\n\t(printf \"2. Ver aumentos anuales\")\n\t(define opc (read))\n\t(printf \"Ingrese la cantidad de años que lleva en la empresa\")\n\t(define anios (read))\n\t(cond\n\t\t[(= opc 1)\n\t\t\t(if (> anios 15)\n\t\t\t\t(printf \"Salario anual de: ~a\" (+ (* 40000 1.2) 40000))\n\t\t\t\t(if (and (< anios 15) (> anios 10))\n\t\t\t\t(printf \"Salario anual de: ~a\" (+ (* 40000 0.8) 40000))\n\t\t\t\t(if (and (< anios 10) (> anios 5))\n\t\t\t\t\t(printf \"Salario anual de: ~a\" (+ (* 40000 0.5) 40000))\n\t\t\t\t\t(if (and (< anios 5) (> anios 0))\n\t\t\t\t\t(printf \"Salario anual de: ~a\" (+ (* 40000 0.3) 40000))\n\t\t\t\t\t(printf \"Ingrese una año valido\")\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\t\t)\n\t\t\t)\n\t\t]\n\t\t[(= opc 2)\n\t\t\t(printf \"Si lleva más de 15 años en la empresa 12%\")\n\t\t\t(printf \"Si lleva menos de 15 pero más de 10 años 8%\")\n\t\t\t(printf \"Si lleva menos de 10 pero más de 5 años 5%\")\n\t\t\t(printf \"Si lleva menos de 5 años 3%\")\n\t\t]\n\t\t[else (printf \"Ingrese una opción valida\")]\n\t)\n)\n\n(salario)"
-            }
-        },
-        "condicionalB" :
-        {
+            },
             "1b" : 
             {
                 "codigo":"//Escribir un programa que detecte si un número introducido\n//desde el teclado es positivo o negativo.\nint main (){\n\tint num;\n\tscanf(\"%d\", &num);\n\tif (num < 0){\n\t\tprintf (\"Numero negativo: %d\", num);\n\t\tprintf (\"Numero positivo: %d\", num);\n\t}\n}\n"
@@ -52,7 +49,7 @@
             "6b" : 
             {
                 "codigo":"//Escribir un programa que calcule el sueldo que le corresponde al \n//trabajador de una empresa que cobra 40.000  dólares  anuales, el \n//programa debe realizar los cálculos en función de los siguientes \n//criterios.\n//a.Si lleva más de 15 años en la empresa obtiene un aumento del 12%.\n//b.Si lleva más de 10  y menos de 15 años obtiene un aumento del 8%.\n//c.Si lleva más de  5  y menos de 10 años obtiene un aumento del 5%.\n//d.  Si lleva menos de 5 años se le aplica un aumento del 3%.\n#include <stdio.h>\n#include <stdlib.h>\nint main()\n{\n\tint anios, opcion;\n\tprintf(\"Seleccione opción:\");\n\tprintf(\"1. Calcular sueldo anual\");\n\tprintf(\"2. Ver aumentos anuales\");\n\tscanf(\"%d\",&opcion);\n\tswitch (opcion)\n\t{\n\t\tcase 1:\n\t\t\tif (anios > 15){\n\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 1.2) + 40000));\n\t\t\t}else{\n\t\t\t\tif ((anios < 15) && (anios > 10)){\n\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.8) + 40000));\n\t\t\t\t}else{\n\t\t\t\t\tif ((anios < 10) && (anios > 5)){\n\t\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.5) + 40000));\n\t\t\t\t\t}else{\n\t\t\t\t\t\tif ((anios < 5) && (anios > 0)){\n\t\t\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.3) + 40000));\n\t\t\t\t\t\t}else{\n\t\t\t\t\t\t\tprintf (\"Ingrese una año valido\");\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tbreak;\n\t\tcase 2:\n\t\t\tprintf (\"Si lleva más de 15 años en la empresa 12%\");\n\t\t\tprintf (\"Si lleva menos de 15 pero más de 10 años 8%\");\n\t\t\tprintf (\"Si lleva menos de 10 pero más de 5 años 5%\");\n\t\t\tprintf (\"Si lleva menos de 5 años 3%\");\n\t\t\tbreak;\n\t\t\tdefault:\n\t\t\tprintf(\"Opción no válida.\");\n\t\t\tbreak;\n}\n}"
-            }     
+            } 
         }
     }
 ]
