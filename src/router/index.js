@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home/Home';
-import Compiller from '../pages/codes/codeCompiler';
+import Compiller from '../pages/codes/Compiler';
 import Practices from '../pages/practica/practicas';
 import NotFound from '../pages/NotFound/NotFound';
-import Start from '../pages/Start/Start';
+import Start from '../pages/Start/Start.js';
+import Module from '../pages/Module/Module.js';
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
         <Route path="/menu" component={Home} />
         <Route path="/compiler" component={Compiller} />
         <Route path="/practice" component={Practices} />
+        <Route path="/module" component={Module} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
