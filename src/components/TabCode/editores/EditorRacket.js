@@ -5,7 +5,7 @@ import './editor-stryle.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 //import Condi from '../../../LogicModel/condicionales';
-//import Expresiones from '../../../LogicModel/expresiones';
+import Expresiones from '../../../LogicModel/expresiones';
 
   
 export default class Editor extends Component {
@@ -44,6 +44,7 @@ export default class Editor extends Component {
         var modul;
         switch (this.props.module){
             case 'ciclos': modul = new Ciclos();
+            case 'expresiones' : modul = new Expresiones();
         }
 
         switch(this.props.ejemplo){

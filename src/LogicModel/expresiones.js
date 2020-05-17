@@ -27,7 +27,7 @@ export default class Expresiones{
         var pul, yar, met, mil;
         pul = (input*12) + (input2/0.0254);
         yar = (input*3) + (input2*1.09361);
-        input2t = (input*0.3045) + input2;
+        input2 = (input*0.3045) + input2;
         mil = (input*0.00019) + (input2*0.00062);
         return  "La suma en pulgadas es: " + pul +
                 "\nLa suma en yardas es: " + yar +

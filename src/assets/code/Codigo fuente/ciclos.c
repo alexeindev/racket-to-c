@@ -10,7 +10,7 @@ int main(){
 }
 
 
-/*COnstruir un programa que  imprima por pantalla la siguiente secuencia:
+/*Construir un programa que  imprima por pantalla la siguiente secuencia:
 0 1 2 3 4
 0 1 2 3 4
 0 1 2 3 4
@@ -53,7 +53,7 @@ negativo n y visualice la siguiente salida:
 1 */
 #include <stdio.h>
 void main(void){
-    int k, i ,n;
+    int k, i;
     printf("Introduzca un valor entero:");
     scanf("%d",&i);
     while(i >= 1){

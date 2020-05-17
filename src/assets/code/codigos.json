@@ -92,7 +92,7 @@
             },
             "4b" : 
             {
-                "codigo": "/*Diseñar e implementar un programa que solicite a su usuario un valor no\nnegativo n y visualice la siguiente salida:\n1 2 3 … n-1 n\n1 2 3 … n-1\n ….\n1 */\n#include <stdio.h>\nvoid main(void){\n\tint k, i ,n;\n\tprintf(\"Introduzca un valor entero:\");\n\tscanf(\"%d\",&i);\n\twhile(i >= 1){\n\t\tk = 1;\n\t\twhile(k <= i){\n\t\t\tprintf(\"%d\\t\",k);\n\t\t\tk++;\n\t\t}\n\t\ti--;\n\t}\n}\n"
+                "codigo": "/*Diseñar e implementar un programa que solicite a su usuario un valor no\nnegativo n y visualice la siguiente salida:\n1 2 3 … n-1 n\n1 2 3 … n-1\n ….\n1 */\n#include <stdio.h>\nvoid main(void){\n\tint k, i;\n\tprintf(\"Introduzca un valor entero:\");\n\tscanf(\"%d\",&i);\n\twhile(i >= 1){\n\t\tk = 1;\n\t\twhile(k <= i){\n\t\t\tprintf(\"%d\\t\",k);\n\t\t\tk++;\n\t\t}\n\t\ti--;\n\t}\n}\n"
             },
             "5b" : 
             {
