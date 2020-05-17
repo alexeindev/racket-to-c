@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import Editor2 from './editores/EditorC';
 import Editor1 from './editores/EditorRacket';
 import data from '../../assets/code/condicionales.json';
+import Ciclos from '../../LogicModel/ciclos';
 
 
 function TabPanel(props) {
@@ -47,6 +48,7 @@ function a11yProps(index) {
 
 export default function ScrollableTabsButtonAuto() {
   const theme = useTheme();
+  const Ciclo = new Ciclos();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -89,7 +91,7 @@ export default function ScrollableTabsButtonAuto() {
                     <Editor1 code = {data[0]['1']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2 code = {data[1]['1']['codigo']}/>
+                    <Editor2 code = {data[1]['1']['codigo']} outs = {Ciclo.uno()}/>
                 </div>
             </div>    
         </TabPanel>
@@ -99,7 +101,7 @@ export default function ScrollableTabsButtonAuto() {
                     <Editor1 code = {data[0]['2']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2 code = {data[1]['2']['codigo']}/>
+                    <Editor2 code = {data[1]['2']['codigo']} outs = {Ciclo.dos()}/>
                 </div>
             </div>   
         </TabPanel>
@@ -109,7 +111,7 @@ export default function ScrollableTabsButtonAuto() {
                     <Editor1 code = {data[0]['3']['codigo']}/>
                 </div>
                 <div >
-                    <Editor2 code = {data[1]['3']['codigo']}/>
+                    <Editor2 code = {data[1]['3']['codigo']} outs = {Ciclo.tres(6)}/>
                 </div>
             </div>   
         </TabPanel>
