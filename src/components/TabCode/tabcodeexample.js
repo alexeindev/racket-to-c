@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Editor2 from './editores/EditorC';
 import Editor1 from './editores/EditorRacket';
-import data from '../../assets/code/condicionales.json';
+import data from '../../assets/code/codigos.json';
 import Ciclos from '../../LogicModel/ciclos';
 
 

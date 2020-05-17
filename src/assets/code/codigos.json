@@ -50,6 +50,58 @@
             {
                 "codigo":"//Escribir un programa que calcule el sueldo que le corresponde al \n//trabajador de una empresa que cobra 40.000  dólares  anuales, el \n//programa debe realizar los cálculos en función de los siguientes \n//criterios.\n//a.Si lleva más de 15 años en la empresa obtiene un aumento del 12%.\n//b.Si lleva más de 10  y menos de 15 años obtiene un aumento del 8%.\n//c.Si lleva más de  5  y menos de 10 años obtiene un aumento del 5%.\n//d.  Si lleva menos de 5 años se le aplica un aumento del 3%.\n#include <stdio.h>\n#include <stdlib.h>\nint main()\n{\n\tint anios, opcion;\n\tprintf(\"Seleccione opción:\");\n\tprintf(\"1. Calcular sueldo anual\");\n\tprintf(\"2. Ver aumentos anuales\");\n\tscanf(\"%d\",&opcion);\n\tswitch (opcion)\n\t{\n\t\tcase 1:\n\t\t\tif (anios > 15){\n\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 1.2) + 40000));\n\t\t\t}else{\n\t\t\t\tif ((anios < 15) && (anios > 10)){\n\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.8) + 40000));\n\t\t\t\t}else{\n\t\t\t\t\tif ((anios < 10) && (anios > 5)){\n\t\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.5) + 40000));\n\t\t\t\t\t}else{\n\t\t\t\t\t\tif ((anios < 5) && (anios > 0)){\n\t\t\t\t\t\t\tprintf (\"Salario anual de: ~a\" ((40000 * 0.3) + 40000));\n\t\t\t\t\t\t}else{\n\t\t\t\t\t\t\tprintf (\"Ingrese una año valido\");\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tbreak;\n\t\tcase 2:\n\t\t\tprintf (\"Si lleva más de 15 años en la empresa 12%\");\n\t\t\tprintf (\"Si lleva menos de 15 pero más de 10 años 8%\");\n\t\t\tprintf (\"Si lleva menos de 10 pero más de 5 años 5%\");\n\t\t\tprintf (\"Si lleva menos de 5 años 3%\");\n\t\t\tbreak;\n\t\t\tdefault:\n\t\t\tprintf(\"Opción no válida.\");\n\t\t\tbreak;\n}\n}"
             } 
+        },
+
+        "ciclos":
+        {
+            "1" : 
+            {
+                "codigo": ""
+            },
+            "2" : 
+            {
+                "codigo": ""
+            },
+            "3" : 
+            {
+                "codigo": ""
+            },
+            "4" : 
+            {
+                "codigo": ""
+            },
+            "5" : 
+            {
+                "codigo": ""
+            },
+            "6" : 
+            {
+                "codigo": ""
+            },
+            "1b" : 
+            {
+                "codigo": "/*Construir un programa que muestre los números  del 1 hasta\nel 10 utilizando la estructira de iteracion for*/\n#include <stdio.h>\nint main(){\n\tint contador=0;\n\tfor( contador=1; contador<11 ; contador++ ) {\n\t\tprintf(\"\\n%d\",contador);\n\t}\n\treturn 0;\n}"
+            },
+            "2b" : 
+            {
+                "codigo": "/*COnstruir un programa que  imprima por pantalla la siguiente secuencia:\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\nComo restriccion */\n#include <stdio.h>\nint main(){\n\tfor (int i = 0; i<5; i++){\n\t\tfor (int j=0; j<5; j++){\n\t\t\tprintf(\"%d\", j);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n"
+            },
+            "3b" : 
+            {
+                "codigo": "//Calcular la suma de los números pares e impares comprendidos entre 1 y n.\n#include <stdio.h>\nint main(){\n \tint num, c = 1, par = 0, impar = 0;\n\tprintf(\"Ingrese la cantidad de numeros a sumas: \");\n\tscanf(\"%d\", &num);\n\twhile (c < num){\n\t\tif(c % 2 == 0){\n\t\t\tpar += c;\n\t\t}else{\n\t\t\timpar += c;\n\t\t}\n\t\t\tc++;\n\t}\n\tprintf(\"Suma de pares: %d\", par);\n\tprintf(\"Suma de impares: %d\", impar);\n}\n"
+            },
+            "4b" : 
+            {
+                "codigo": "/*Diseñar e implementar un programa que solicite a su usuario un valor no\nnegativo n y visualice la siguiente salida:\n1 2 3 … n-1 n\n1 2 3 … n-1\n ….\n1 */\n#include <stdio.h>\nvoid main(void){\n\tint k, i ,n;\n\tprintf(\"Introduzca un valor entero:\");\n\tscanf(\"%d\",&i);\n\twhile(i >= 1){\n\t\tk = 1;\n\t\twhile(k <= i){\n\t\t\tprintf(\"%d\\t\",k);\n\t\t\tk++;\n\t\t}\n\t\ti--;\n\t}\n}\n"
+            },
+            "5b" : 
+            {
+                "codigo": "/*Los padres de una niña le prometieron darle 10 dólares cuando cumpliera 12\naños de edad y duplicar el regalo en cada cumpleaños subsiguiente hasta que\nel regalo excediera 1000 dólares. Escriba un programa para determinar qué \nedad tendrá la niña cuando se le dé la última cantidad y la cantidad total \nrecibida.*/\n#include <stdio.h>\nint main(){\n\tint edad = 12, d = 10, total = 10;\n\tprintf(\"Calculo del dinero recibido: \");\n\tdo{\n\t\td = d * 2;\n\t\ttotal += d;\n\t\tedad++;\n\t}while(total < 1000);\n\tprintf(\"Edad: %d\", edad);\n\tprintf(\"Dinero recibido: %d\", d);\n\tprintf(\"Total recibido: %d\", total);\n}\n"
+            },
+            "6b" : 
+            {
+                "codigo": "/*Construir un programa que calcule y visualice el siguiente esquema\n1! + 2! + 3! + … + (n – 1)! + n!*/\n#include <stdio.h>\nvoid main(void){\n\tint n, i = 1, m;\n\tfloat fact, suma = 0;\n\tprintf(\"Ingrese el valor de n: \");\n\tscanf(\"%d\",&n);\n\tdo{\n\t\tfact = 1;\n\t\tm = i;\n\t\twhile(m > 1){\n\t\t\tfact *= m;\n\t\t\tm--;\n\t\t}\n\t\tsuma+=fact;\n\t\tprintf(\"\\t %d! = %0.f\",i,fact);\n\t\ti++;\n\t}while(i <= n);\n\tprintf(\"\\tsuma = %0.f\",suma);\n} \n"
+            }
         }
     }
 ]
