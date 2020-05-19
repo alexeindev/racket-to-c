@@ -56,27 +56,27 @@
         {
             "1" : 
             {
-                "codigo": ""
+                "codigo": ";Construir un programa que muestre los números  del 1 hasta\n;el 10 utilizando la estructira de iteracion for\n(define (numeros)\n\t(for ([contador (in-range 1 11 1)])\n\t\t(printf \"\\n~a\" contador)\n\t)\n)\n(numeros)\n"
             },
             "2" : 
             {
-                "codigo": ""
+                "codigo": ";COnstruir un programa que  imprima por pantalla la siguiente secuencia:\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;Como restriccion \n(define (secuencia)\n\t(for ([i (in-range 0 5 1)])\n\t\t(for ([j (in-range 0 5 1)])\n\t\t\t(printf \" ~a\" j)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n(secuencia)"
             },
             "3" : 
             {
-                "codigo": ""
+                "codigo": ";Calcular la suma de los números pares e impares comprendidos entre 1 y n.\n (define (suma)\n\t(define c 1)(define par 0)(define impar 0)\n\t(printf \"Ingrese la cantidad de numeros a sumas: \")\n\t(define num (read))\n\t(while (< c num)\n\t\t(if (= (remainder c 2) 0)\n\t\t\t(set! par (+ par c))\n\t\t\t(set! impar (+ impar c))\n)\t\t\n\t\t(set! c (+ c 1))\n\t)\n\t(printf \"Suma de pares: ~a\" par)\n\t(printf \"Suma de impares: ~a\" impar)\n)\n(suma)"
             },
             "4" : 
             {
-                "codigo": ""
+                "codigo": ";Diseñar e implementar un programa que solicite a su usuario un valor no\n;negativo n y visualice la siguiente salida:\n;1 2 3 … n-1 n\n;1 2 3 … n-1\n;….\n;1 \n(define (decremento)\n\t(define k 1)(define i (read))\n\t(while (>= i  1)\n\t\t(set! k 1)\n\t\t(while (<= k i)\n\t\t\t(printf \" ~a\" k)\n\t\t\t(set! k (+ k 1))\n\t\t)\n\t\t(set! i (- i 1))\n\t)\n)\n(decremento)"
             },
             "5" : 
             {
-                "codigo": ""
+                "codigo": ";Los padres de una niña le prometieron darle 10 dólares cuando cumpliera 12\n;años de edad y duplicar el regalo en cada cumpleaños subsiguiente hasta que\n;el regalo excediera 1000 dólares. Escriba un programa para determinar qué \n;edad tendrá la niña cuando se le dé la última cantidad y la cantidad total \n;recibida.\n(define (dinero)\n\t(define edad 12)(define d 10)(define total 10)(define i 0)\n\t(printf \"Calculo del dinero recibido: \")\n\t(do ((i 1 (+ i 1))) ((< total 1000))\n\t\t(set! d (* d 2))\n\t\t(set! total (+ total d))\n\t\t(set! edad (+ edad 1))\n\t)\n\t(printf \"Edad: ~a\", edad)\n\t(printf \"Dinero recibido: ~a\" d)\n\t(printf \"Total recibido: ~a\" total)\n)\n(dinero)"
             },
             "6" : 
             {
-                "codigo": ""
+                "codigo": ";Construir un programa que calcule y visualice el siguiente esquema\n;1! + 2! + 3! + … + (n – 1)! + n!\n(define (factoriales)\n\t(define i = 1)(define m = 0)\n\t(define fact 0)(define suma 0)\n\t(printf \"Ingrese el valor de n: \")\n\t(define suma (read))\n\t(do ((i 1 (+ i 1))) ((<= i n))\n\t\t(set! fact 1)\n\t\t(set! m = i)\n\t\t(while (> m 1)\n\t\t\t(set! fact (* fact m))\n\t\t\t(set! m (- m 1))\n\t\t)\n\t\t(set! suma (+ suma fact))\n\t\t(printf \"\\t ~a! = ~a \" i fact)\n\t\t(set! i (+ i 1))\n\t)\n\t(printf \"\\tsuma = ~a\" suma)\n)\n(factoriales)"
             },
             "1b" : 
             {

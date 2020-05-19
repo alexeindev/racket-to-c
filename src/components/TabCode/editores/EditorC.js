@@ -43,32 +43,34 @@ export default class Editor extends Component {
   };
 
   onSubmit = (e) => {
-    var modul;
+    var moduls;
     switch (this.props.module) {
       case 'ciclos':
-        modul = new Ciclos();
+        moduls = new Ciclos();
+        break;
       case 'expresiones':
-        modul = new Expresiones();
+        moduls = new Expresiones();
+        break;
     }
 
     switch (this.props.ejemplo) {
       case 1:
-        document.getElementById('output2').value = modul.uno();
+        document.getElementById('output2').value = moduls.uno();
         break;
       case 2:
-        document.getElementById('output2').value = modul.dos();
+        document.getElementById('output2').value = moduls.dos();
         break;
       case 3:
-        document.getElementById('output2').value = modul.tres(12);
+        document.getElementById('output2').value = moduls.tres(12);
         break;
       case 4:
-        document.getElementById('output2').value = modul.cuatro(8);
+        document.getElementById('output2').value = moduls.cuatro(8);
         break;
       case 5:
-        document.getElementById('output2').value = modul.cinco();
+        document.getElementById('output2').value = moduls.cinco();
         break;
       case 6:
-        document.getElementById('output2').value = modul.seis(12);
+        document.getElementById('output2').value = moduls.seis(12);
         break;
     }
   };
