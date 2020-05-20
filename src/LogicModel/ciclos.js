@@ -16,7 +16,7 @@ export default class Ciclos{
     tres(input){
         var c=1, par = 0, impar = 0;
         while (c <  input){
-            if(c % 2 == 0){
+            if((c % 2) == 0){
                 par += c;
             }else{
                 impar += c;
@@ -27,7 +27,7 @@ export default class Ciclos{
     }
     
     cuatro(input){
-        var k, i = input, n;
+        var k, i = input;
         var dat = "";
         while(i >= 1){
             k = 1;
@@ -48,7 +48,7 @@ export default class Ciclos{
             total += d;
             edad++;
         }while(total < 1000);
-        return  "Edad: " + edad + 
+        return  "Edad: " + String(edad) + 
                 "\nDinero recibido: " + d + 
                 "\nTotal recibido: " + total;
     }

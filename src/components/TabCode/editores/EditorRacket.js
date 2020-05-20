@@ -47,29 +47,31 @@ export default class Editor extends Component {
     var modul;
     switch (this.props.module) {
       case 'ciclos':
-        modul = new Ciclos();
+          modul = new Ciclos();
+          break;
       case 'expresiones':
-        modul = new Expresiones();
+          modul = new Expresiones();
+          break;
     }
 
     switch (this.props.ejemplo) {
       case 1:
-        document.getElementById('output2').value = modul.uno();
+        document.getElementById('output').value = modul.uno();
         break;
       case 2:
-        document.getElementById('output2').value = modul.dos();
+        document.getElementById('output').value = modul.dos();
         break;
       case 3:
-        document.getElementById('output2').value = modul.tres(12);
+        document.getElementById('output').value = modul.tres(12);
         break;
       case 4:
-        document.getElementById('output2').value = modul.cuatro(8);
+        document.getElementById('output').value = modul.cuatro(8);
         break;
       case 5:
-        document.getElementById('output2').value = modul.cinco();
+        document.getElementById('output').value = modul.cinco();
         break;
       case 6:
-        document.getElementById('output2').value = modul.seis(12);
+        document.getElementById('output').value = modul.seis(12);
         break;
     }
   };
@@ -93,9 +95,9 @@ export default class Editor extends Component {
           />
         </div>
         <textarea
-          id=" output"
+          id="output"
           className="compiler__output texts"
-          placeholder="compiler__outText"
+          placeholder="output"
           disabled
         />
         <button className="compiler__button" onClick={this.onSubmit}>

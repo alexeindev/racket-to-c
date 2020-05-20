@@ -81,5 +81,21 @@
 ;Construir un programa que calcule y visualice el siguiente esquema
 ;1! + 2! + 3! + … + (n – 1)! + n!
 (define (factoriales)
-    
+    (define i = 1)(define m = 0)
+    (define fact 0)(define suma 0)
+    (printf "Ingrese el valor de n: ")
+    (define suma (read))
+    (do ((i 1 (+ i 1))) ((<= i n))
+        (set! fact 1)
+        (set! m = i)
+        (while (> m 1)
+            (set! fact (* fact m))
+            (set! m (- m 1))
+        )
+        (set! suma (+ suma fact))
+        (printf "\t ~a! = ~a " i fact)
+        (set! i (+ i 1))
+    )
+    (printf "\tsuma = ~a" suma)
 )
+(factoriales)
