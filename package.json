@@ -34,7 +34,8 @@
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9",
     "react-tab-pane": "0.0.6",
-    "reactjs-popup": "^1.5.0"
+    "reactjs-popup": "^1.5.0",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "rescripts start",
