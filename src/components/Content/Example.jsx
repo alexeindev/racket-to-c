@@ -7,11 +7,11 @@ function Example(props) {
   return (
     <div className="example">
       <div className="example__editor">
-        <Editor1 ejemplo={props.label} module={'ciclos'} />
+        <Editor1 ejemplo={props.label} module={props.modules} />
       </div>
       <button className="compiler__button">Comparar código</button>
       <div className="example__editor">
-        <Editor2 className="compiler" ejemplo={props.label} module={'ciclos'} />
+        <Editor2 className="compiler" ejemplo={props.label} module={props.modules} />
       </div>
     </div>
   );

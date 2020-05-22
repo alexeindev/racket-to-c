@@ -60,7 +60,7 @@
             },
             "2" : 
             {
-                "codigo": ";COnstruir un programa que  imprima por pantalla la siguiente secuencia:\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;Como restriccion \n(define (secuencia)\n\t(for ([i (in-range 0 5 1)])\n\t\t(for ([j (in-range 0 5 1)])\n\t\t\t(printf \" ~a\" j)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n(secuencia)"
+                "codigo": ";Construir un programa que  imprima por pantalla la siguiente secuencia:\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;0 1 2 3 4\n;Como restriccion \n(define (secuencia)\n\t(for ([i (in-range 0 5 1)])\n\t\t(for ([j (in-range 0 5 1)])\n\t\t\t(printf \" ~a\" j)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n(secuencia)"
             },
             "3" : 
             {
@@ -84,7 +84,7 @@
             },
             "2b" : 
             {
-                "codigo": "/*COnstruir un programa que  imprima por pantalla la siguiente secuencia:\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\nComo restriccion */\n#include <stdio.h>\nint main(){\n\tfor (int i = 0; i<5; i++){\n\t\tfor (int j=0; j<5; j++){\n\t\t\tprintf(\"%d\", j);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n"
+                "codigo": "/*Construir un programa que  imprima por pantalla la siguiente secuencia:\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\n0 1 2 3 4\nComo restriccion */\n#include <stdio.h>\nint main(){\n\tfor (int i = 0; i<5; i++){\n\t\tfor (int j=0; j<5; j++){\n\t\t\tprintf(\"%d\", j);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n"
             },
             "3b" : 
             {

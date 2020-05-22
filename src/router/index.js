@@ -15,7 +15,7 @@ function Router() {
         <Route path="/menu" component={Home} />
         <Route path="/compiler" component={Compiller} />
         <Route path="/practice" component={Practices} />
-        <Route path="/module" component={Module} />
+        <Route path="/module/:modules" component={Module} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

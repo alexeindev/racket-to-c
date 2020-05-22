@@ -13,7 +13,8 @@ export default class Ciclos{
         return count;
     }
 
-    tres(input){
+    tres(){
+        var input = Math.floor((Math.random()*(55-1))+1);
         var c=1, par = 0, impar = 0;
         while (c <  input){
             if((c % 2) == 0){
@@ -26,7 +27,8 @@ export default class Ciclos{
         return "Suma de pares: "+par+"\nSuma de impares: "+impar;
     }
     
-    cuatro(input){
+    cuatro(){
+        var input = Math.floor((Math.random()*(25-1))+1);
         var k, i = input;
         var dat = "";
         while(i >= 1){
@@ -53,7 +55,8 @@ export default class Ciclos{
                 "\nTotal recibido: " + total;
     }
 
-    seis(input){
+    seis(){
+        var input = Math.floor((Math.random()*(26-1))+1);
         var n = input, i = 1, m, fact, suma = 0, dat = "";
         do{
             fact = 1;

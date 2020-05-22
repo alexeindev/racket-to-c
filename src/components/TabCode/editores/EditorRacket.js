@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import './editor-stryle.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
-//import Condi from '../../../LogicModel/condicionales';
+import Condi from '../../../LogicModel/condicionales';
 import Expresiones from '../../../LogicModel/expresiones';
 
 export default class Editor extends Component {
@@ -52,6 +52,9 @@ export default class Editor extends Component {
       case 'expresiones':
           modul = new Expresiones();
           break;
+      case 'condicionales':
+          modul = new Condi();
+          break;
     }
 
     switch (this.props.ejemplo) {
@@ -62,16 +65,16 @@ export default class Editor extends Component {
         document.getElementById('output').value = modul.dos();
         break;
       case 3:
-        document.getElementById('output').value = modul.tres(12);
+        document.getElementById('output').value = modul.tres();
         break;
       case 4:
-        document.getElementById('output').value = modul.cuatro(8);
+        document.getElementById('output').value = modul.cuatro();
         break;
       case 5:
         document.getElementById('output').value = modul.cinco();
         break;
       case 6:
-        document.getElementById('output').value = modul.seis(12);
+        document.getElementById('output').value = modul.seis();
         break;
     }
   };

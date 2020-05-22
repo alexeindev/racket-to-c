@@ -3,84 +3,84 @@
     "title": "1. Expresiones",
     "description": "En esta sección aprenderás a realizar operaciones lógicas y aritméticas de forma sencilla en C, a partir del lenguaje Racket",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/c_scale,h_180,w_300/v1588304170/expresiones_evvaue.jpg",
-    "page": "/",
+    "page": "/module/:Expresiones",
     "difficulty": "Principiante"
   },
   {
     "title": "2. Estructuras de secuencia",
     "description": "En esta sección aprenderás a realizar instrucciones que se ejecutaran una tras otra en el orden que estas van apareciendo de forma sencilla en C, a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588303233/secuencia_zkftv3.jpg",
-    "page": "/",
+    "page": "/module/:Estructuras de Secuencia",
     "difficulty": "Principiante"
   },
   {
     "title": "3. Estructuras de selección",
     "description": "En esta sección asimilarás el uso de las instrucciones condicionales básicas de C como el if y switch, a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297450/condicionales_gpbsxh.jpg",
-    "page": "/compiler",
+    "page": "/module/:Estructuras de Selección",
     "difficulty": "Principiante"
   },
   {
     "title": "4. Estructuras de iteración",
     "description": "Esta sección compara y explica el funcionamiento de las estructuras de iteración: while do/while y for en lenguaje C, a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297452/ciclos_nsqu7h.jpg",
-    "page": "/",
+    "page": "/module/:Estructuras de iteración",
     "difficulty": "Principiante"
   },
   {
     "title": "5. Cadenas y Caracteres",
     "description": "En esta sección entenderás el uso, declaración e inicialización de cadenas y caracteres en C, además, aprenderás las funciones para su manejo, comparando con Racket su estructura.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588301931/cadenas_gvpafr.jpg",
-    "page": "/",
+    "page": "/module/:Cadenas y Caracteres",
     "difficulty": "Principiante"
   },
   {
     "title": "6. Vectores",
     "description": "En esta sección aprenderás cómo crear, inicializar y modificar vectores en C, comparando con Racket su estructura.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297452/vectores_yrdayo.jpg",
-    "page": "/",
+    "page": "/module/:Vectores",
     "difficulty": "Medio"
   },
   {
     "title": "7. Matrices",
     "description": "En esta sección aprenderás cómo crear, inicializar y modificar Matrices en C, comparando con Racket su estructura.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588301281/matrices_ykgyrk.jpg",
-    "page": "/",
+    "page": "/module/:Matrices",
     "difficulty": "Medio"
   },
   {
     "title": "8. Estructuras de datos",
     "description": "En esta sección abarcarás qué son las estructuras de datos; cómo crearlas y operarlas.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297452/estructuras_qeygqt.jpg",
-    "page": "/",
+    "page": "/module/:Estructuras de Datos",
     "difficulty": "Medio"
   },
   {
     "title": "9. Funciones",
     "description": "En esta sección conseguirás entender la forma correcta de definir y llamar funciones en C a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297451/funciones_nllwgh.jpg",
-    "page": "/",
+    "page": "/module/:Funciones",
     "difficulty": "Medio"
   },
   {
     "title": "10. Composición de Funciones",
     "description": "En esta sección descubrirás qué es la composición de funciones, cómo implementarla de forma sencilla C, a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/c_scale,h_180,w_300/v1588305730/WhatsApp_Image_2020-04-30_at_11.01.15_PM_s3raey.jpg",
-    "page": "/",
+    "page": "/module/:Composición de Funciones",
     "difficulty": "Medio"
   },
   {
     "title": "11. Procedimientos",
     "description": "En esta sección aprenderás como crear y usar procedimientos en C a partir del lenguaje Racket.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297451/procedimientos_xpt6tw.jpg",
-    "page": "/",
+    "page": "/module/:Procedimientos",
     "difficulty": "Medio"
   },
   {
     "title": "12. Modo gráfico",
     "description": "En esta sección profundizarás en funciones que te sirvan para crear entornos gráficos básicos como figuras hasta llegar a los fundamentos del desarrollo de videojuegos.",
     "img": "https://res.cloudinary.com/djqxz1kvu/image/upload/v1588297451/grafico_goeef3.jpg",
-    "page": "/",
+    "page": "/module/:Modo gráfico",
     "difficulty": "Avanzado"
   },
   {

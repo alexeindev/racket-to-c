@@ -1,19 +1,23 @@
 
 
 export default class Expresiones{
-    uno(input){
+    uno(){
+        var input = (Math.random()*(26-1))+1;
         return "El perimetro es: " + ((2 * 3.141592)* input);
     }
 
-    dos(input){
-       return "El volumen del cubo es: " + (input ** 3);
+    dos(){
+        var input = (Math.random()*(26-1))+1;
+        return "El volumen del cubo es: " + (input ** 3);
     }
 
-    tres(input,input2){
+    tres(){
+        var input = Math.floor((Math.random()*(100-1))+1), input2 = Math.floor((Math.random()*(100-1))+1);
         return "la hipotenusa es: " + Math.sqrt(Math.pow(input,2) + Math.pow(input2,2));
     }
     
-    cuatro(input){
+    cuatro(){
+        var input = (Math.random()*(32-1))+1;
         var coste_azucar = 0.6, coste_cafe = 0.72, kilos_azucar, kilos_cafe;
         kilos_azucar = input / 2 / coste_azucar;
         kilos_cafe = input / 3 / coste_cafe;
@@ -23,7 +27,8 @@ export default class Expresiones{
                "Quedan "+ input + "euros";
     }
 
-    cinco(input, input2){
+    cinco(){
+        var input = Math.floor((Math.random()*(100-1))+1), input2 = Math.floor((Math.random()*(100-1))+1);
         var pul, yar, met, mil;
         pul = (input*12) + (input2/0.0254);
         yar = (input*3) + (input2*1.09361);
@@ -35,7 +40,8 @@ export default class Expresiones{
                 "\nLa suma en millas es: " + mil;
     }
 
-    seis(input, input2){
+    seis(){
+        var input = (Math.random()*(100-1))+1;
         var m_c, p_c, r_m, r_p, c_m, c_p;
         m_c = input/1000;
         p_c = m_c/0.0283;

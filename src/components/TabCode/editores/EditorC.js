@@ -3,7 +3,7 @@ import MonacoEditor from '@etclabscore/react-monaco-editor';
 import './editor-stryle.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
-//import Condi from '../../../LogicModel/condicionales';
+import Condi from '../../../LogicModel/condicionales';
 import Expresiones from '../../../LogicModel/expresiones';
 
 export default class Editor extends Component {
@@ -51,6 +51,10 @@ export default class Editor extends Component {
       case 'expresiones':
         moduls = new Expresiones();
         break;
+      case 'condicionales':
+        moduls = new Condi();
+        break;
+      ///poner un default
     }
 
     switch (this.props.ejemplo) {
@@ -61,17 +65,18 @@ export default class Editor extends Component {
         document.getElementById('output2').value = moduls.dos();
         break;
       case 3:
-        document.getElementById('output2').value = moduls.tres(12);
+        document.getElementById('output2').value = moduls.tres();
         break;
       case 4:
-        document.getElementById('output2').value = moduls.cuatro(8);
+        document.getElementById('output2').value = moduls.cuatro();
         break;
       case 5:
         document.getElementById('output2').value = moduls.cinco();
         break;
       case 6:
-        document.getElementById('output2').value = moduls.seis(12);
+        document.getElementById('output2').value = moduls.seis();
         break;
+      ///poner un default
     }
   };
 

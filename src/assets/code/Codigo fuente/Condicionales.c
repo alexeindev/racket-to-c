@@ -166,16 +166,16 @@ int main()
     {
         case 1:
             if (anios > 15){
-                printf ("Salario anual de: ~a" ((40000 * 1.2) + 40000));
+                printf ("Salario anual de: %d", ((40000 * 1.2) + 40000));
             }else{
                 if ((anios < 15) && (anios > 10)){
-                    printf ("Salario anual de: ~a" ((40000 * 0.8) + 40000));
+                    printf ("Salario anual de: %d", ((40000 * 0.8) + 40000));
                 }else{
                     if ((anios < 10) && (anios > 5)){
-                        printf ("Salario anual de: ~a" ((40000 * 0.5) + 40000));
+                        printf ("Salario anual de: %d", ((40000 * 0.5) + 40000));
                     }else{
                         if ((anios < 5) && (anios > 0)){
-                            printf ("Salario anual de: ~a" ((40000 * 0.3) + 40000));
+                            printf ("Salario anual de: %d", ((40000 * 0.3) + 40000));
                         }else{
                             printf ("Ingrese una año valido");
                         }
