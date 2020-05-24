@@ -88,6 +88,7 @@ export default class Editor extends Component {
       <div className="compiler">
         <div className="compiler__editor monaco-theme">
           <MonacoEditor
+            readOnly = "true"
             width="100%"
             height="400px"
             language="scheme"
