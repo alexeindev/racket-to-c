@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
+//import dynamic from "next/dynamic";
 import MonacoEditor from '@etclabscore/react-monaco-editor';
 import './editor-stryle.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 import Condi from '../../../LogicModel/condicionales';
 import Expresiones from '../../../LogicModel/expresiones';
+//const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
 export default class Editor extends Component {
   constructor(props) {
     super(props);
   }
 
-  ejemplos() {
+  ejemplos(ejemplo, module) {
     var code;
-    switch (this.props.ejemplo) {
+    switch (ejemplo) {
       case 1:
-        code = data[0][this.props.module]['1b']['codigo'];
+        code = data[0][module]['1b']['codigo'];
         break;
       case 2:
-        code = data[0][this.props.module]['2b']['codigo'];
+        code = data[0][module]['2b']['codigo'];
         break;
       case 3:
-        code = data[0][this.props.module]['3b']['codigo'];
+        code = data[0][module]['3b']['codigo'];
         break;
       case 4:
-        code = data[0][this.props.module]['4b']['codigo'];
+        code = data[0][module]['4b']['codigo'];
         break;
       case 5:
-        code = data[0][this.props.module]['5b']['codigo'];
+        code = data[0][module]['5b']['codigo'];
         break;
       case 6:
-        code = data[0][this.props.module]['6b']['codigo'];
+        code = data[0][module]['6b']['codigo'];
         break;
     }
     return code;
@@ -81,9 +83,13 @@ export default class Editor extends Component {
   };
 
   render() {
-    const code = this.ejemplos();
+    const code = this.ejemplos(this.props.ejemplo, this.props.module);
     const options = {
       selectOnLineNumbers: true,
+      readOnly: true,
+      minimap: {
+        enabled: false
+      }
     };
     return (
       <div className="compiler compiler--left">

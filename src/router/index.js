@@ -6,6 +6,7 @@ import Practices from '../pages/practica/practicas';
 import NotFound from '../pages/NotFound/NotFound';
 import Start from '../pages/Start/Start.js';
 import Module from '../pages/Module/Module.js';
+import comparison from '../pages/Comparison/Comparison.js';
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/compiler" component={Compiller} />
         <Route path="/practice" component={Practices} />
         <Route path="/module/:modules" component={Module} />
+        <Route path="/comparison/:code" component={comparison} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

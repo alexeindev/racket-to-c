@@ -12,26 +12,26 @@ export default class Editor extends Component {
     super(props);
   }
 
-  ejemplos() {
+  ejemplos(ejemplo, module) {
     var code;
-    switch (this.props.ejemplo) {
+    switch (ejemplo) {
       case 1:
-        code = data[0][this.props.module]['1']['codigo'];
+        code = data[0][module]['1']['codigo'];
         break;
       case 2:
-        code = data[0][this.props.module]['2']['codigo'];
+        code = data[0][module]['2']['codigo'];
         break;
       case 3:
-        code = data[0][this.props.module]['3']['codigo'];
+        code = data[0][module]['3']['codigo'];
         break;
       case 4:
-        code = data[0][this.props.module]['4']['codigo'];
+        code = data[0][module]['4']['codigo'];
         break;
       case 5:
-        code = data[0][this.props.module]['5']['codigo'];
+        code = data[0][module]['5']['codigo'];
         break;
       case 6:
-        code = data[0][this.props.module]['6']['codigo'];
+        code = data[0][module]['6']['codigo'];
         break;
     }
     return code;
@@ -80,9 +80,13 @@ export default class Editor extends Component {
   };
 
   render() {
-    const code = this.ejemplos();
+    const code = this.ejemplos(this.props.ejemplo, this.props.module);
     const options = {
       selectOnLineNumbers: true,
+      readOnly: true,
+      minimap: {
+        enabled: false
+      }
     };
     return (
       <div className="compiler">
