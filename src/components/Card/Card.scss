@@ -1,6 +1,6 @@
 .Card {
-  width: 318px;
-  height: 418px;
+  width: 330px;
+  height: 500px;
   margin: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 16px;
@@ -8,14 +8,12 @@
   flex-direction: column;
 
   &__img {
-    width: 318px;
-    height: 180px;
+    height: 230px;
     border-radius: 16px 16px 0px 0px;
   }
 
   &__text {
-    width: 316px;
-    height: 180px;
+    height: 230px;
     border-radius: 0px 0px 16px 16px;
     padding: 20px;
 
@@ -26,6 +24,7 @@
 
     &--description {
       font-weight: ligth;
+      font-size: 16px;
     }
   }
 
