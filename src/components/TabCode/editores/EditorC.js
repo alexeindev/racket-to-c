@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-//import dynamic from "next/dynamic";
-import MonacoEditor from '@etclabscore/react-monaco-editor';
-import './editor-stryle.scss';
+import dynamic from "next/dynamic";
+import './editor-style.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 import Condi from '../../../LogicModel/condicionales';
 import Expresiones from '../../../LogicModel/expresiones';
-//const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
+const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
 export default class Editor extends Component {
   constructor(props) {
@@ -95,6 +94,7 @@ export default class Editor extends Component {
       <div className="compiler compiler--left">
         <div className="compiler__editor monaco-theme">
           <MonacoEditor
+            width="600px"
             height="400px"
             language="c"
             value={code}

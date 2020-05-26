@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import MonacoEditor from '@etclabscore/react-monaco-editor';
+import dynamic from "next/dynamic";
 import { Button } from '@material-ui/core';
-import './editor-stryle.scss';
+import './editor-style.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 import Condi from '../../../LogicModel/condicionales';
 import Expresiones from '../../../LogicModel/expresiones';
+const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
 export default class Editor extends Component {
   constructor(props) {
@@ -92,8 +93,7 @@ export default class Editor extends Component {
       <div className="compiler">
         <div className="compiler__editor monaco-theme">
           <MonacoEditor
-            readOnly = "true"
-            width="100%"
+            width="600px"
             height="400px"
             language="scheme"
             value={code}
@@ -104,7 +104,7 @@ export default class Editor extends Component {
         </div>
         <textarea
           id="output"
-          className="compiler__output texts"
+          className="texts"
           placeholder="output"
           disabled
         />

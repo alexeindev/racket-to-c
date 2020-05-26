@@ -5,7 +5,7 @@
   background-color: rgba (255, 255, 255, 0.849);
   color: #000000;
   padding: 1%;
-  height: 80px;
+  height: 400px;
 }
 
 .p-align {
@@ -32,6 +32,7 @@
   }
 
   &__editor {
+    text-align: left;
     width: 100%;
   }
 
@@ -48,5 +49,6 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 18px;
+    align-items: flex-end;
   }
 }
