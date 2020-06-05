@@ -8,7 +8,7 @@ function mods(module){
   var name;
   switch (module){
     case 'Expresiones': 
-      name = 'ciclos';
+      name = 'expresiones';
       break
     case 'Estructuras de Secuencia': 
       name = 'condicionales';
@@ -23,10 +23,10 @@ function mods(module){
       name = 'ciclos';
       break
     case 'Vectores': 
-      name = 'ciclos';
+      name = 'vectores';
       break
     case 'Matrices': 
-      name = 'ciclos';
+      name = 'matrices';
       break
     case 'Estructuras de Datos': 
       name = 'ciclos';

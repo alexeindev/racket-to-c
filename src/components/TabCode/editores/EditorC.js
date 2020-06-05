@@ -4,6 +4,7 @@ import './editor-style.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 import Condi from '../../../LogicModel/condicionales';
+import Vect from '../../../LogicModel/vectores';
 import Expresiones from '../../../LogicModel/expresiones';
 const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
@@ -46,16 +47,22 @@ export default class Editor extends Component {
   onSubmit = (e) => {
     var moduls;
     switch (this.props.module) {
-      case 'ciclos':
-        moduls = new Ciclos();
-        break;
       case 'expresiones':
         moduls = new Expresiones();
+        break;
+      case 'ciclos':
+        moduls = new Ciclos();
         break;
       case 'condicionales':
         moduls = new Condi();
         break;
-      ///poner un default
+      case 'vectores':
+        moduls = new Vect();
+        break;
+      case 'matrices':
+        moduls = new Vect();
+        break;
+      ///poner un default 
     }
 
     switch (this.props.ejemplo) {

@@ -5,6 +5,7 @@ import './editor-style.scss';
 import data from '../../../assets/code/codigos.json';
 import Ciclos from '../../../LogicModel/ciclos';
 import Condi from '../../../LogicModel/condicionales';
+import Vect from '../../../LogicModel/vectores';
 import Expresiones from '../../../LogicModel/expresiones';
 const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
@@ -55,6 +56,12 @@ export default class Editor extends Component {
           break;
       case 'condicionales':
           modul = new Condi();
+          break;
+      case 'vectores':
+          modul = new Vect();
+          break;
+      case 'matrices':
+          modul = new Vect();
           break;
     }
 
