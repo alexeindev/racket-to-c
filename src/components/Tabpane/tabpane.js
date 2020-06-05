@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import data from '../../assets/data/practicas.json';
 
 
-
-
 export default class tabpane extends Component {
 
   ejercicios(ejemplo, module){
@@ -22,12 +20,11 @@ export default class tabpane extends Component {
     return ejer;
   }
 
-
-
   render() {
+    const { dat } = this.props;
     return (
       <div>
-        <h1> {this.ejercicios(2,'matrices')} </h1>
+        <h1> { this.ejercicios(1, dat) } </h1>
       </div>
     )
   }

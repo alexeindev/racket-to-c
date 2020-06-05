@@ -11,7 +11,7 @@ function mods(module){
       name = 'expresiones';
       break
     case 'Estructuras de Secuencia': 
-      name = 'condicionales';
+      name = 'secuencia';
       break
     case 'Estructuras de Selección': 
       name = 'condicionales';
@@ -20,7 +20,7 @@ function mods(module){
       name = 'ciclos';
       break
     case 'Cadenas y Caracteres': 
-      name = 'ciclos';
+      name = 'cadenas';
       break
     case 'Vectores': 
       name = 'vectores';
@@ -29,19 +29,19 @@ function mods(module){
       name = 'matrices';
       break
     case 'Estructuras de Datos': 
-      name = 'ciclos';
+      name = 'estructuras';
       break
     case 'Funciones': 
-      name = 'ciclos';
+      name = 'funciones';
       break
     case 'Composición de Funciones': 
-      name = 'ciclos';
+      name = 'composicion';
       break
     case 'Procedimientos': 
-      name = 'ciclos';
+      name = 'procedimientos';
       break
     case 'Modo gráfico': 
-      name = 'ciclos';
+      name = 'procedimientos';
       break
   }
   return name;
@@ -53,16 +53,17 @@ function Modules(props){
   const [active, setActive] = useState(0);
   const [currentActive, setCurrentActive] = useState(1);
   var name = dat.replace(':',"");
+  const modul = mods(name);
   return (
     <div className="Container">
-      <Navbar />
+      <Navbar mod = {modul}/>
       <div className="Module">
         <h1 className="Module__title">{name}</h1>
         <Tabs
           setCurrentActive={setCurrentActive}
           currentActive={currentActive}
         />
-        <Example label={currentActive} modules = {mods(name)} />
+        <Example label={currentActive} modules = {modul} />
       </div>
     </div>
   );

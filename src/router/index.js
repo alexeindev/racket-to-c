@@ -15,7 +15,7 @@ function Router() {
         <Route exact path="/" component={Start} />
         <Route path="/menu" component={Home} />
         <Route path="/compiler" component={Compiller} />
-        <Route path="/practice" component={Practices} />
+        <Route path="/practice/:modules" component={Practices} />
         <Route path="/module/:modules" component={Module} />
         <Route path="/comparison/:code" component={comparison} />
         <Route component={NotFound} />

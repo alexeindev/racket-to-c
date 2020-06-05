@@ -48,21 +48,42 @@ export default class Editor extends Component {
   onSubmit = (e) => {
     var modul;
     switch (this.props.module) {
-      case 'ciclos':
-          modul = new Ciclos();
-          break;
       case 'expresiones':
-          modul = new Expresiones();
-          break;
+        modul = new Expresiones();
+        break;
+      case 'secuencia': 
+        modul = new Vect();
+        break
       case 'condicionales':
-          modul = new Condi();
-          break;
+        modul = new Condi();
+        break;
+      case 'ciclos':
+        modul = new Ciclos();
+        break;
+      case 'cadenas': 
+        modul = new Ciclos();
+        break
       case 'vectores':
-          modul = new Vect();
-          break;
+        modul = new Vect();
+        break;
       case 'matrices':
-          modul = new Vect();
-          break;
+        modul = new Vect();
+        break;
+      case 'estructuras': 
+        modul = new Vect();
+        break
+      case 'funciones': 
+        modul = new Vect();
+        break
+      case 'composicion': 
+        modul = new Vect();
+        break
+      case 'procedimientos': 
+        modul = new Vect();
+        break
+      case 'Modo gráfico': 
+        modul = new Vect();
+        break
     }
 
     switch (this.props.ejemplo) {
