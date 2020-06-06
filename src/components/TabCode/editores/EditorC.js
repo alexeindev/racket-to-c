@@ -62,7 +62,7 @@ export default class Editor extends Component {
       case 'matrices':
         moduls = new Vect();
         break;
-      ///poner un default 
+      ///poner un default
     }
 
     switch (this.props.ejemplo) {
@@ -111,7 +111,7 @@ export default class Editor extends Component {
         </div>
         <textarea
           id="output2"
-          className="compiler__output texts"
+          className="compiler__output"
           placeholder="output"
           disabled
         />

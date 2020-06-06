@@ -54,19 +54,14 @@ export default class Editor extends Component {
         modul = new Expresiones();
         break;
       case 'condicionales':
-<<<<<<< HEAD
         modul = new Condi();
         break;
-=======
-          modul = new Condi();
-          break;
       case 'vectores':
-          modul = new Vect();
-          break;
+        modul = new Vect();
+        break;
       case 'matrices':
-          modul = new Vect();
-          break;
->>>>>>> cdff3f2904cdf825da460f0a5bca4d3012c633e5
+        modul = new Vect();
+        break;
     }
 
     switch (this.props.ejemplo) {
@@ -114,7 +109,7 @@ export default class Editor extends Component {
         </div>
         <textarea
           id="output"
-          className="compiler__output texts"
+          className="compiler__output"
           placeholder="output"
           disabled
         />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { TabsBar } from './style';
 import Tab from '../Tab/Tab';
-
 export default function Tabs({ setCurrentActive, currentActive }) {
   const TABS_QUANTITY = 6;
   let tabs = new Array();

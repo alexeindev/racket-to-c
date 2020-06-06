@@ -2,11 +2,11 @@
   margin-top: 40px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
 
   &__editor {
-    width: 100%;
-    background-color: red;
+    width: 45%;
   }
 }
