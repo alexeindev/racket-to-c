@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar/Navbar.jsx';
 function Home() {
   return (
     <div class="Container">
-      <Navbar></Navbar>
+      <Navbar mod = {'expresiones'}></Navbar>
       <div className="Home">
         {data.map(function (element) {
           return (

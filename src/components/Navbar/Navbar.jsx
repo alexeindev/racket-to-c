@@ -3,6 +3,12 @@ import './Navbar.scss';
 import logo from '../../assets/img/logo.png';
 
 class Navbar extends Component {
+  
+  module(){
+    const mod = this.props.mod;
+    return mod;
+  }
+
   render() {
     return (
       <header className="Navbar">
@@ -16,7 +22,7 @@ class Navbar extends Component {
           <a className="Navbar__link Navbar__link--element" href="/menu">
             Módulos
           </a>
-          <a className="Navbar__link Navbar__link--element" href="/practice">
+          <a className="Navbar__link Navbar__link--element" href={"/practice/:"+this.module()}>
             Práctica
           </a>
           <a className="Navbar__link Navbar__link--element" href="/">

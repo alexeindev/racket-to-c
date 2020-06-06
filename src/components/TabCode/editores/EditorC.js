@@ -50,11 +50,17 @@ export default class Editor extends Component {
       case 'expresiones':
         moduls = new Expresiones();
         break;
-      case 'ciclos':
-        moduls = new Ciclos();
+      case 'secuencia':
+        moduls = new Vect();
         break;
       case 'condicionales':
         moduls = new Condi();
+        break;
+      case 'ciclos':
+        moduls = new Ciclos();
+        break;
+      case 'cadenas':
+        moduls = new Ciclos();
         break;
       case 'vectores':
         moduls = new Vect();
@@ -62,7 +68,21 @@ export default class Editor extends Component {
       case 'matrices':
         moduls = new Vect();
         break;
-      ///poner un default
+      case 'estructuras':
+        moduls = new Vect();
+        break;
+      case 'funciones':
+        moduls = new Vect();
+        break;
+      case 'composicion':
+        moduls = new Vect();
+        break;
+      case 'procedimientos':
+        moduls = new Vect();
+        break;
+      case 'Modo gráfico':
+        moduls = new Vect();
+        break;
     }
 
     switch (this.props.ejemplo) {
