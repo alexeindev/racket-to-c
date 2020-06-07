@@ -33,8 +33,8 @@ const Practice = (props) => {
           <Tabs
             setCurrentActive={setCurrentActive}
             currentActive={currentActive}
-            direction="column"
-            index={12}
+            direction="row"
+            index={3}
             type="Estructuras"
           />
           <div>{ejercicios(1, 'estructuras')}</div>

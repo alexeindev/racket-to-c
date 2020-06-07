@@ -1,29 +1,46 @@
-.example {
-    margin-top: 20px;
+.Compare {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  &__editor {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    flex-wrap: initial;
-    align-items: flex-start;
-  
-    &__editor {
-      width: 450px;
-    }
   }
 
-  .texts {
-    resize: none;
-    margin-top: initial;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-right:100px;
-    background-color: rgba (255, 255, 255, 0.849);
-    color: #000000;
-    padding: 1%;
-    height: 150px;
-    width: 400px;
+  textarea {
+    align-self: end;
   }
 
-  .outline{
-    border: rgb(136, 136, 136) 1px solid;
+  margin-bottom: 40px;
+}
+
+.Compare__text-area {
+  text-align: center;
+}
+
+.texts {
+  resize: none;
+  margin-top: initial;
+  font-size: 15px;
+  background-color: rgba (255, 255, 255, 0.849);
+  color: #000000;
+  padding: 1%;
+  height: 300px;
+  width: 600px;
+
+  &--variables {
+    height: 100px;
+    width: 600px;
   }
+}
+
+.outline {
+  border: rgb(136, 136, 136) 1px solid;
+}
+
+.compiler__button {
+  padding-bottom: 10px;
+}

@@ -6,10 +6,12 @@ import logo from '../../assets/img/logos.png';
 function Start() {
   return (
     <div className="Container">
-      <Navbar mod = {'expresiones'}></Navbar>
+      <Navbar mod={'expresiones'}></Navbar>
       <div className="info">
         <div className="info__text">
-          <h3 className="info__text--title">Guía comparación de lenguaje Racket y C</h3>
+          <h3 className="info__text--title">
+            Guía de comparación de lenguaje Racket y C
+          </h3>
           <p className="info__text--description">
             Este sitio web tiene como objetivo ser un instrumento que sirva de
             apoyo a los estudiantes de la Universidad Tecnológica de Pereira
