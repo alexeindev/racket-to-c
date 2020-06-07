@@ -46,6 +46,7 @@ function C(props) {
   );
 }
 
+//a ver si ya te funciona.. porque a mi corre normal
 export default class Steps extends Component {
   render() {
     const mod1 = new exp();
