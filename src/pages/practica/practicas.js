@@ -11,10 +11,10 @@ export default class practicas extends Component {
 
   render() {
     const mods = this.props.match.params.modules;
-    var name = mods.replace(':',"");
+    var name = mods.replace(':', '');
     return (
       <div className="Container">
-        <Navbar mod = {name}></Navbar>
+        <Navbar mod={name}></Navbar>
         <div className="practice-container">
           <div className="information">
             <h1>Herramienta de práctica</h1>
@@ -28,9 +28,8 @@ export default class practicas extends Component {
           </div>
           <div className="code-editor">
             <div className="editor-container">
-              <div>
-              </div>
-              <Tabs dat = {name}></Tabs>
+              <div></div>
+              <Tabs index={12} dat={name}></Tabs>
             </div>
           </div>
         </div>

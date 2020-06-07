@@ -1,13 +1,25 @@
 import React from 'react';
-import { TabsBar } from './style';
 import Tab from '../Tab/Tab';
-export default function Tabs({ setCurrentActive, currentActive }) {
-  const TABS_QUANTITY = 6;
+import './Tabs.scss';
+
+export default function Tabs({
+  setCurrentActive,
+  currentActive,
+  direction,
+  type,
+  index,
+}) {
+  const TABS_QUANTITY = index;
   let tabs = new Array();
   for (let i = 1; i <= TABS_QUANTITY; i++) {
     tabs.push(
-      <Tab onClick={setCurrentActive} index={i} currentActive={currentActive} />
+      <Tab
+        onClick={setCurrentActive}
+        name={`${i}. ${type} `}
+        index={i}
+        currentActive={currentActive}
+      />
     );
   }
-  return <TabsBar>{tabs}</TabsBar>;
+  return <div className={`tabs--${direction}`}>{tabs}</div>;
 }
