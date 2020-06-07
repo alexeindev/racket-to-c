@@ -77,7 +77,9 @@ c�digo ASCII*/
 			contador_espacios++;
 		}
 	}
-	printf("\nLa Cadena ingresada tiene:\n\t%d valores numericos.\n\t%d espacios en blanco. ", contador_numeros, contador_espacios);
+	printf("\nLa Cadena ingresada tiene: ");
+	printf("\n%d valores numericos.", contador_numeros);
+	printf("\n%d espacios en blanco. ", contador_espacios);
  }
 /*Cree una simulaci�n de una base de datos que guarde el 
 nombre de 3 personas, el programa debe pedir al usuario 
