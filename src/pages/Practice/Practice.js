@@ -20,12 +20,16 @@ function ejercicios(ejemplo, module) {
   return ejer;
 }
 
-const Practice = (props) => {
+function Practices(props) {
   //Declaración de la variable de estado active
-  const [currentActive, setCurrentActive] = useState(2);
+  const { dat } = props;
+  const [active, setActive] = useState(0);
+  const [currentActive, setCurrentActive] = useState(1);
+  var name = dat.replace(':', '');
+  const modul = name;
   return (
     <div className="Container">
-      <Navbar />
+      <Navbar mod={modul} />
       <div className="Practice">
         <h1 className="Practice__title">Herramienta de práctica</h1>
         <div className="Practice__content">
@@ -35,13 +39,21 @@ const Practice = (props) => {
             currentActive={currentActive}
             direction="row"
             index={3}
-            type="Estructuras"
+            type="Ejercicio"
           />
-          <div>{ejercicios(1, 'estructuras')}</div>
+          <div>{ejercicios(currentActive, modul)}</div>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Practice;
+export default class Practice extends Component {
+  render() {
+    return (
+      <div>
+        <Practices dat={this.props.match.params.modules} />
+      </div>
+    );
+  }
+}

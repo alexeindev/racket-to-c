@@ -16,7 +16,7 @@ function Router() {
         <Route exact path="/" component={Start} />
         <Route path="/menu" component={Home} />
         <Route path="/compiler" component={Compiller} />
-        <Route path="/modpractice" component={Practice} />
+        <Route path="/modpractice/:modules" component={Practice} />
         <Route path="/practice/:modules" component={Practices} />
         <Route path="/module/:modules" component={Module} />
         <Route path="/comparison/:code" component={comparison} />

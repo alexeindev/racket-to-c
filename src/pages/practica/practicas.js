@@ -29,7 +29,7 @@ export default class practicas extends Component {
           <div className="code-editor">
             <div className="editor-container">
               <div></div>
-              <Tabs index={12} dat={name}></Tabs>
+              <Tabs num={1} dat={name}></Tabs>
             </div>
           </div>
         </div>
