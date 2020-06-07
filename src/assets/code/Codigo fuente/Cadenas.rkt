@@ -24,7 +24,7 @@
         (set! tam (- tam 1))
     )
     (printf "\nCADENA INVERTIDA: ")
-	printf("\n~a" cadReverse)
+	(printf "\n~a" cadReverse)
 )
 
 (reverse)
@@ -60,3 +60,24 @@
 ;cuantos n�meros, y espacios en blanco contiene dicha cadena.
 ;Nota: Una buena manera de realizar el ejercicio es usando el
 ;c�digo ASCII
+(define (contador)
+    (deinfe cantNums 0)(deinfe cantSpace 0)
+    (define cad "")
+    (printf "Ingrese una cadena maximo de 20 caracteres: ")
+ 	(string-copy! cad (read))
+    (for ([i (in-range 0 (string-length cad) 1)])
+        (for ([j (in-range 48 58 1)])
+            (if (= (char->integer (string-ref cad i)) j)
+                (set! cantNums (+ cantNums 1))
+            )
+        )
+        (if (= (char->integer (string-ref cad i)) 32)
+            (set! cantSpace (+ cantSpace 1))
+        )
+    )
+    (printf "\nLa Cadena ingresada tiene: ")
+	(printf "\n%d valores numericos." cantNums)
+	(printf "\n%d espacios en blanco. " cantSpace)
+)
+
+(contador)

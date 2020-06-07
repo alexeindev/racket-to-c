@@ -21,10 +21,10 @@ export default class tabpane extends Component {
   }
 
   render() {
-    const { dat } = this.props;
+    const { num, dat } = this.props;
     return (
       <div>
-        <h1> { this.ejercicios(1, dat) } </h1>
+        <h1> { this.ejercicios(num, dat) } </h1>
       </div>
     )
   }
