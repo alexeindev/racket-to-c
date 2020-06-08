@@ -1,40 +1,30 @@
 .Compare {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-
-  &__editor {
-    display: flex;
-    flex-direction: row;
-  }
+  flex-wrap: nowrap;
+  width: 100%;
 
   textarea {
     align-self: end;
   }
-
-  margin-bottom: 40px;
 }
 
 .Compare__text-area {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .texts {
-  resize: none;
-  margin-top: initial;
   font-size: 15px;
   background-color: rgba (255, 255, 255, 0.849);
   color: #000000;
-  padding: 1%;
-  height: 300px;
-  width: 600px;
-
-  &--variables {
-    height: 100px;
-    width: 600px;
-  }
+  height: 400px;
+  width: 500px;
+  margin: 0px;
 }
 
 .outline {

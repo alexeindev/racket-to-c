@@ -10,8 +10,8 @@ function Racket(props) {
   return (
     <div className="outline">
       <MonacoEditor
-        width="700"
-        height="350"
+        width="400"
+        height="400"
         language="scheme"
         value={props.code}
         options={{
@@ -30,8 +30,8 @@ function C(props) {
   return (
     <div className="outline">
       <MonacoEditor
-        width="700"
-        height="350"
+        width="400"
+        height="400"
         language="c"
         value={props.code}
         options={{
@@ -46,30 +46,20 @@ function C(props) {
   );
 }
 
-//a ver si ya te funciona.. porque a mi corre normal
 export default class Steps extends Component {
   render() {
     const mod1 = new exp();
     const mod2 = new exp2();
     return (
       <div className="Compare">
-        <div className="Compare__editor">
-          <Racket code={mod1.ejemplos(1, 'ciclos')}></Racket>
-          <div className="Compare__text-area">
-            <textarea id="steps" className="texts" disabled />
-            <textarea id="steps" className="texts--variables" disabled />
-          </div>
+        <Racket code={mod1.ejemplos(1, 'ciclos')}></Racket>
+        <div className="Compare__text-area">
+          <textarea id="steps" className="texts" disabled />
+          <a href="/" className="compiler__button">
+            Comparar
+          </a>
         </div>
-        <a href="/" className="compiler__button">
-          Comparar
-        </a>
-        <div className="Compare__editor">
-          <C code={mod2.ejemplos(1, 'ciclos')}></C>
-          <div className="Compare__text-area">
-            <textarea id="steps" className="texts" disabled />
-            <textarea id="steps" className="texts--variables" disabled />
-          </div>
-        </div>
+        <C code={mod2.ejemplos(1, 'ciclos')}></C>
       </div>
     );
   }
