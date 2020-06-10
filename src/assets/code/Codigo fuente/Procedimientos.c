@@ -25,8 +25,6 @@ Implemente un procedimiento que dado un numero imprima en
 palabrasel mes del a�o correspondiente.
 */
 #include <stdio.h>
-void mes_palabras(int mes);
-
 void mes_palabras(int mes){
 	switch(mes){
 		case 1: printf("Enero");break;
@@ -53,14 +51,10 @@ int main(){
 	}while(mes>0 && mes<=12);
 }
 //------------------------------------------------------------------------------------------------------------------------
-/*
-Crear un programa en C que contenga un procedimiento que imprima 
-un cuadrado de acuerdo a un caracter que se le entrega junto con 
-el tama�o de los lados de este.
-*/
+/*Crear un programa en C que contenga un procedimiento que
+imprima un cuadrado de acuerdo a un caracter que se le 
+entrega junto con el tama�o de los lados de este.*/
 #include <stdio.h>
-void cuadrado(char c, int lado);
-
 void cuadrado(char c, int lado){
 	int i, j;
 	for(i=0; i<lado; i++){
@@ -81,63 +75,58 @@ int main(){
 	cuadrado(c, lado);
 }
 //------------------------------------------------------------------------------------------------------------------------
-/*
-Cree un programa que reciba una fecha (dia, mes y a�o) en variables separadas,
-luego implemente un procedimiento que muestre la fecha siguiente.
-*/
+/*Cree un programa que reciba una fecha (dia, mes y a�o) en
+variables separadas, luego implemente un procedimiento que 
+muestre la fecha siguiente.*/
 #include <stdio.h>
 void fecha_siguiente(int dia, int mes, int anio){
+	printf("\n\n***FECHA SIGUIENTE:***\n");
 	if(dia>0 && dia<=31 && mes>0 && mes<=12){
-		printf("\n\n***FECHA SIGUIENTE:***\n");
 		if(dia==31 && mes==12){
-			dia=mes=1;
+			dia=1;
+			mes=1;
 			anio=anio+1;
-			printf("\t[%d/%d/%d]", dia, mes, anio);
+			printf("[%d/%d/%d]", dia, mes, anio);
 		}else if(dia==31){
 			dia=1;
 			mes=mes+1;
-			printf("\t[%d/%d/%d]", dia, mes, anio);
+			printf("[%d/%d/%d]", dia, mes, anio);
 		}else{
 			dia=dia+1;
-			printf("\t[%d/%d/%d]", dia, mes, anio);
+			printf("[%d/%d/%d]", dia, mes, anio);
 		}	
 	}else printf("\n\n***FECHA INVALIDA***");
 }
 
 int main(){
 	int d, m, a;
-	printf("Ingrese una fecha.\n\tDia: ");
+	printf("Ingrese una fecha.\nDia: ");
 	scanf("%d", &d);
-	printf("\tMes: ");
+	printf("Mes: ");
 	scanf("%d", &m);
-	printf("\tAnio: ");
+	printf("Anio: ");
 	scanf("%d", &a);
 	fecha_siguiente(d,m,a);
 }
 //------------------------------------------------------------------------------------------------------------------------
-/*
-Cree un programa en c que tenga los procedimientos basicos relacionados con vectores, 
-llenar e imprimir un vector.
-*/
-#include <stdio.h>
-void llenar_vector(int vector[], int tamano);
-void imprimir_vector(int vector[], int tamano);
-
-void llenar_vector(int vector[], int tamano){
-	int i, num;
-	for(i=0; i<tamano; i++){
-		printf("\n\tPosicion %d :", i+1);
-		scanf("%d", &num);
-		vector[i]=num;
+/*Cree un programa en c que tenga los procedimientos basicos 
+relacionados con vectores, llenar e imprimir un vector.*/
+void imprimir_vector(int vector[], int tamano){
+	printf("\n\n***EL VECTOR ES: ***\n");
+	for(int i=0; i<tamano; i++){
+		printf("%d ", vector[i]);
 	}	
 }
 
-void imprimir_vector(int vector[], int tamano){
-	int i, num;
-	printf("\n\n***EL VECTOR ES: ***\n");
-	for(i=0; i<tamano; i++){
-		printf("\t%d", vector[i]);
-	}	
+#include <stdio.h>
+void llenar_vector(int vector[], int tamano){
+	int num;
+	for(int i=0; i<tamano; i++){
+		printf("\nPosicion %d :", i+1);
+		scanf("%d", &num);
+		vector[i]=num;
+	}
+	imprimir_vector(vector, tamano);
 }
 
 int main(){
@@ -146,25 +135,18 @@ int main(){
 	scanf("%d", &tamano);
 	int vector[tamano];
 	llenar_vector(vector, tamano);
-	imprimir_vector(vector, tamano);
+	
 }
 //--------------------------------------------------------------------------------------------------------------------------------
-/*
-Con base al anterior programa, cree un procedimiento que ordene de manera
-ascendente los valores de un vector de N enteros dado por el usuario.
-*/
+/*Con base al anterior programa, cree un procedimiento que 
+ordene de manera ascendente los valores de un vector de N 
+enteros dado por el usuario.*/
 #include <stdio.h>
-void llenar_vector(int vector[], int tamano);
-void ordenar_vector_asc(int vector[], int tamano);
-void imprimir_vector(int vector[], int tamano);
-
-void llenar_vector(int vector[], int tamano){
-	int i, num;
-	for(i=0; i<tamano; i++){
-		printf("\n\tPosicion %d: ", i+1);
-		scanf("%d", &num);
-		vector[i]=num;
-	}	
+void imprimir_vector(int vector[], int tamano){
+	printf("\n\n***EL VECTOR ES: ***\n");
+	for(int i=0; i<tamano; i++){
+		printf("%d", vector[i]);
+	}
 }
 
 void ordenar_vector(int vector[], int tamano){
@@ -175,17 +157,21 @@ void ordenar_vector(int vector[], int tamano){
         		temp=vector[j]; 
         		vector[j]=vector[i]; 
         		vector[i]=temp; 
-      		} 
-    	} 
-  	}	
+      		}
+    	}
+  	}
+	imprimir_vector(vector, tamano);
 }
 
-void imprimir_vector(int vector[], int tamano){
-	int i, num;
-	printf("\n\n***EL VECTOR ES: ***\n");
-	for(i=0; i<tamano; i++){
-		printf("\t%d", vector[i]);
-	}	
+void llenar_vector(int vector[], int tamano){
+	int num;
+	for(int i=0; i<tamano; i++){
+		printf("\nPosicion %d: ", i+1);
+		scanf("%d", &num);
+		vector[i]=num;
+	}
+	imprimir_vector(vector, tamano);
+	ordenar_vector(vector, tamano);
 }
 
 int main(){
@@ -194,6 +180,4 @@ int main(){
 	scanf("%d", &tamano);
 	int vector[tamano];
 	llenar_vector(vector, tamano);
-	ordenar_vector_asc(vector, tamano);
-	imprimir_vector(vector, tamano);
 }

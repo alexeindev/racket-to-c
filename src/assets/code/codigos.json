@@ -361,6 +361,58 @@
             {
                 "codigo": "/*Escriba un programa que use funciones recursivas \nel cual permita escribir la sucesi�n de Fibonacci.*/\n#include <stdio.h>\n#include <stdlib.h>\nint fibonacci(int n){\n\tif (n == 1){\n\t\treturn 1;\n\t}else if (n==2){\n\t\treturn 1;\n\t}else return fibonacci(n-1) + fibonacci(n-2);\n}\n\nint main(){\n\tint i, limite;\n\tprintf(\"Escriba el limite para la sucesion de fibonacci: \");\n\tscanf(\"%d\", &limite);\n\tfor (i=0; i<limite; i++){\n\t\tprintf(\"%d\\n\", fibonacci(i));\n\t}\n}"
             }
+        },
+
+        "procedimientos":
+        {
+            "1" : 
+            {
+                "codigo": ";Implemente un procedimiento que reciba un numero e imprima\n;si el numero es positivo o negativo, en caso de ser positivo\n;debe analizar si es par o impar.\n(define (analisis n)\n\t(if (> n 0)\n\t\t(begin\n\t\t\t(printf \"\\nEl numero ingresado es positivo.\")\n\t\t\t(if (= (remainder n 2) 0)\n\t\t\t\t(printf \"\\nAdemas el numero es par.\")\n\t\t\t\t(printf \"\\nAdemas el numero es impar.\")\n\t\t\t)\n\t\t)\n\t\t(printf \"\\nEl numero ingresado es Negativo.\")\n\t)\n\n)\n\n(define (main)\n\t(define numero 0)\n\n\t(printf \"Ingrese un numero para analizar: \")\n\t(set! numero (read))\n\t(analisis numero)\n)\n\n(main)"
+            },
+            "2" : 
+            {
+                "codigo": ";Implemente un procedimiento que dado un numero imprima en\n;palabrasel mes del a�o correspondiente.\n(define (mes_palabras mes)\n\t(cond\n\t\t((= mes 1) (printf \"Enero\"))\n\t\t((= mes 2) (printf \"Febrero\"))\n\t\t((= mes 3) (printf \"Marzo\"))\n\t\t((= mes 4) (printf \"Abril\"))\n\t\t((= mes 5) (printf \"Mayo\"))\n\t\t((= mes 6) (printf \"Junio\"))\n\t\t((= mes 7) (printf \"Julio\"))\n\t\t((= mes 8) (printf \"Agosto\"))\n\t\t((= mes 9) (printf \"Septiembre\"))\n\t\t((= mes 10) (printf \"Octubre\"))\n\t\t((= mes 11) (printf \"Noviembre\"))\n\t\t((= mes 12) (printf \"Diciembre\"))\n\t)\n)\n\n(define (main)\n\t(define mes 0)\n\t(do ((i 1 (+ i 1))) ((and (> mes 0)(< mes 13)))\n\t\t(printf \"\\nIngrese un numero: \")\n\t\t(set! mes (read))\n\t\t(mes_palabras mes)\n\t)\n)\n\n(main)"
+            },
+            "3" : 
+            {
+                "codigo": ";Crear un programa en Racket que contenga un procedimiento que\n;imprima un cuadrado de acuerdo a un caracter que se le\n;entrega junto con el tama�o de los lados de este.\n(define (cuadrado c lado)\n\t(for ([i (in-range 0 lado 1)])\n\t\t(for ([j (in-range 0 lado 1)])\n\t\t\t(printf \"~a \" c)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n\n(define (main)\n\t(define c 0)\n\t(define lado 0)\n\t(printf \"Ingrese un caracter para imprimir: \")\n\t(set! c (read))\n\t(printf \"Ingrese el tamano de los lados del cuadrado: \")\n\t(set! lado (read))\n\t(cuadrado c lado)\n)\n\n(main)"
+            },
+            "4" : 
+            {
+                "codigo": ";Cree un programa que reciba una fecha (dia, mes y a�o) en\n;variables separadas, luego implemente un procedimiento que\n;muestre la fecha siguiente.\n(define (fecha_siguiente dia mes anio)\n\t(printf \"\\n\\n***FECHA SIGUIENTE:***\\n\")\n\t(if (dia>0 && dia<=31 && mes>0 && mes<=12)\n\t\t(if (and (= dia 31)  (= mes 12))\n\t\t\t(begin\n\t\t\t\t(set! dia 1)\n\t\t\t\t(set! mes 1)\n\t\t\t\t(set! anio (+ anio 1))\n\t\t\t\t(printf \"[~a/~a/~a]\" dia mes anio)\n\t\t\t)\n\t\t\t(if (= dia 31)\n\t\t\t\t(begin \n\t\t\t\t\t(set! dia 1)\n\t\t\t\t\t(set! mes (+ mes 1))\n\t\t\t\t\t(printf \"[~a/~a/~a]\" dia mes anio)\n\t\t\t\t)\n\t\t\t\t(begin\n\t\t\t\t\t(set! dia (+ dia 1))\n\t\t\t\t\t(printf \"[~a/~a/~a]\" dia mes anio)\n\t\t\t\t)\n\t\t\t)\n\t\t)\n\t\t(printf \"\\n***FECHA INVALIDA***\")\n\t)\n)\n\n(define (main)\n\t(define d 0)(define m 0)(define a 0)\n\t(printf \"Ingrese una fecha.\\nDia: \")\n\t(set! d (read))\n\t(printf \"Mes: \")\n\t(set! m (read))\n\t(printf \"Anio: \")\n\t(set! a (read))\n\t(fecha_siguiente d m a)\n)\n\n(main)"
+            },
+            "5" : 
+            {
+                "codigo": ";Cree un programa en c que tenga los procedimientos basicos \n;relacionados con vectores, llenar e imprimir un vector.\n(define (imprimir_vector vec tam)\n\t(printf \"\\n***EL VECTOR ES: ***\\n\")\n\t(for ([i (in-range 0 tam 1)])\n\t\t(printf \"~a \" (vector-ref vect i))\n\t)\n)\n\n(define (llenar_vector vect tam)\n\t(define num 0)\n\t(for ([i (in-range 0 tam 1)])\n\t\t(printf \"\\nPosicion ~a: \" i+1)\n\t\t(set! num (read))\n\t\t(vector-set! vect i num)\n\t)\n\t(imprimir_vector vect tam)\n)\n\n(define (main)\n\t(define tam 0)\n\t(printf \"Ingrese un tamano para el vector: \")\n\t(set! tam (read))\n\t(define vect (make-vector tam 0))\n\t(llenar_vector vect tam)\n)\n\n(main)"
+            },
+            "6" : 
+            {
+                "codigo": ";Con base al anterior programa, cree un procedimiento que\n;ordene de manera ascendente los valores de un vector de N\n;enteros dado por el usuario.\n(define (imprimir_vector vec tam)\n\t(printf \"\\n***EL VECTOR ES: ***\\n\")\n\t(for ([i (in-range 0 tam 1)])\n\t\t(printf \"~a \" (vector-ref vect i))\n\t)\n)\n\n(define (ordenar_vector vect tam)\n\t(define temp 0)\n\t(for ([i (in-range 0 tam 1)])\n\t\t(for ([j (in-range 0 tam 1)])\n\t\t\t(if (< (vector-ref vect j) (vector-ref vect i))\n\t\t\t\t(begin\n\t\t\t\t\t(set! temp (vector-ref vect j))\n\t\t\t\t\t(vector-set! vect j (vector-ref vect i))\n\t\t\t\t\t(vector-set! vect i temp)\n\t\t\t\t)\n\t\t\t\t(void)\n\t\t\t)\n\t\t)\n\t)\n\t(imprimir_vector vect tam)\n)\n\n(define (llenar_vector vect tam)\n\t(define num 0)\n\t(for ([i (in-range 0 tam 1)])\n\t\t(printf \"\\nPosicion ~a: \" i+1)\n\t\t(set! num (read))\n\t\t(vector-set! vect i num)\n\t)\n\t(imprimir_vector vect tam)\n\t(ordenar_vector vect tam)\n)\n\n(define (main)\n\t(define tam 0)\n\t(printf \"Ingrese un tamano para el vector: \")\n\t(set! tam (read))\n\t(define vect (make-vector tam 0))\n\t(llenar_vector vect tam)\n)\n\n(main)"
+            },
+            "1b" : 
+            {
+                "codigo": "/*Implemente un procedimiento que reciba un numero e imprima\nsi el numero es positivo o negativo, en caso de ser positivo\ndebe analizar si es par o impar.*/\n#include <stdio.h>\nvoid analisis(int n){\n\tif(n>0){\n\t\tprintf(\"\\nEl numero ingresado es positivo.\");\n\t\tif(n%2==0){ \n\t\t\tprintf(\"\\nAdemas el numero es par.\");\n\t\t}else {\n\t\t\tprintf(\"\\nAdemas el numero es impar.\");\n\t\t}\n\t}else printf(\"\\nEl numero ingresado es Negativo.\");\n}\n\nint main(){\n\tint numero;\n\tprintf(\"Ingrese un numero para analizar: \");\n\tscanf(\"%d\", &numero);\n\tanalisis(numero);\n}"
+            },
+            "2b" : 
+            {
+                "codigo": "/*Implemente un procedimiento que dado un numero imprima en\npalabrasel mes del a�o correspondiente.*/\n#include <stdio.h>\nvoid mes_palabras(int mes){\n\tswitch(mes){\n\t\tcase 1: printf(\"Enero\");break;\n\t\tcase 2: printf(\"Febrero\");break;\n\t\tcase 3: printf(\"Marzo\");break;\n\t\tcase 4: printf(\"Abril\");break;\n\t\tcase 5: printf(\"Mayo\");break;\n\t\tcase 6: printf(\"Junio\");break;\n\t\tcase 7: printf(\"Julio\");break;\n\t\tcase 8: printf(\"Agosto\");break;\n\t\tcase 9: printf(\"Septiembre\");break;\n\t\tcase 10: printf(\"Octubre\");break;\n\t\tcase 11: printf(\"Noviembre\");break;\n\t\tcase 12: printf(\"Diciembre\");break;\n\t}\n}\n\nint main(){\n\tint mes;\n\tdo{\n\t\tprintf(\"\\nIngrese un numero: \");\n\t\tscanf(\"%d\", &mes);\n\t\tmes_palabras(mes);\n\t}while(mes>0 && mes<=12);\n}"
+            },
+            "3b" : 
+            {
+                "codigo": "/*Crear un programa en C que contenga un procedimiento que\nimprima un cuadrado de acuerdo a un caracter que se le \nentrega junto con el tama�o de los lados de este.*/\n#include <stdio.h>\nvoid cuadrado(char c, int lado){\n\tint i, j;\n\tfor(i=0; i<lado; i++){\n\t\tfor(j=0; j<lado; j++){\n\t\t\tprintf(\"%c\", c);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n\nint main(){\n\tchar c;\n\tint lado;\n\tprintf(\"Ingrese un caracter para imprimir: \");\n\tscanf(\"%c\", &c);\n\tprintf(\"Ingrese el tamano de los lados del cuadrado: \");\n\tscanf(\"%d\", &lado);\n\tcuadrado(c, lado);\n}"
+            },
+            "4b" : 
+            {
+                "codigo": "/*Cree un programa que reciba una fecha (dia, mes y a�o) en\nvariables separadas, luego implemente un procedimiento que \nmuestre la fecha siguiente.*/\n#include <stdio.h>\nvoid fecha_siguiente(int dia, int mes, int anio){\n\tprintf(\"\\n\\n***FECHA SIGUIENTE:***\\n\");\n\tif(dia>0 && dia<=31 && mes>0 && mes<=12){\n\t\tif(dia==31 && mes==12){\n\t\t\tdia=1;\n\t\t\tmes=1;\n\t\t\tanio=anio+1;\n\t\t\tprintf(\"[%d/%d/%d]\", dia, mes, anio);\n\t\t}else if(dia==31){\n\t\t\tdia=1;\n\t\t\tmes=mes+1;\n\t\t\tprintf(\"[%d/%d/%d]\", dia, mes, anio);\n\t\t}else{\n\t\t\tdia=dia+1;\n\t\t\tprintf(\"[%d/%d/%d]\", dia, mes, anio);\n\t\t}\n\t}else printf(\"\\n\\n***FECHA INVALIDA***\");\n}\n\nint main(){\n\tint d, m, a;\n\tprintf(\"Ingrese una fecha.\\nDia: \");\n\tscanf(\"%d\", &d);\n\tprintf(\"Mes: \");\n\tscanf(\"%d\", &m);\n\tprintf(\"Anio: \");\n\tscanf(\"%d\", &a);\n\tfecha_siguiente(d,m,a);\n}"
+            },
+            "5b" : 
+            {
+                "codigo": "/*Cree un programa en c que tenga los procedimientos basicos \nrelacionados con vectores, llenar e imprimir un vector.*/\n#include <stdio.h>\nvoid imprimir_vector(int vector[], int tamano){\n\tprintf(\"\\n\\n***EL VECTOR ES: ***\\n\");\n\tfor(int i=0; i<tamano; i++){\n\t\tprintf(\"%d \", vector[i]);\n\t}\n}\n\nvoid llenar_vector(int vector[], int tamano){\n\tint num;\n\tfor(int i=0; i<tamano; i++){\n\t\tprintf(\"\\nPosicion %d :\", i+1);\n\t\tscanf(\"%d\", &num);\n\t\tvector[i]=num;\n\t}\n\timprimir_vector(vector, tamano);\n}\n\nint main(){\n\tint tamano;\n\tprintf(\"Ingrese un tamano para el vector: \");\n\tscanf(\"%d\", &tamano);\n\tint vector[tamano];\n\tllenar_vector(vector, tamano);\n}"
+            },
+            "6b" : 
+            {
+                "codigo": "/*Con base al anterior programa, cree un procedimiento que \nordene de manera ascendente los valores de un vector de N \nenteros dado por el usuario.*/\n#include <stdio.h>\nvoid imprimir_vector(int vector[], int tamano){\n\tprintf(\"\\n\\n***EL VECTOR ES: ***\\n\");\n\tfor(int i=0; i<tamano; i++){\n\t\tprintf(\"%d\", vector[i]);\n\t}\n}\n\nvoid ordenar_vector(int vector[], int tamano){\n\tint i, j, temp;\n\tfor (i=0; i<(tamano-1); i++){\n\t\tfor (j=i+1; j<tamano; j++){\n\t\t\tif (vector[j]<vector[i]){\n\t\t\t\ttemp=vector[j];\n\t\t\t\tvector[j]=vector[i];\n\t\t\t\tvector[i]=temp;\n\t\t\t}\n\t\t}\n\t}\n\timprimir_vector(vector, tamano);\n}\n\nvoid llenar_vector(int vector[], int tamano){\n\tint num;\n\tfor(int i=0; i<tamano; i++){\n\t\tprintf(\"\\nPosicion %d: \", i+1);\n\t\tscanf(\"%d\", &num);\n\t\tvector[i]=num;\n\t}\n\timprimir_vector(vector, tamano);\n\tordenar_vector(vector, tamano);\n}\n\nint main(){\n\tint tamano;\n\tprintf(\"Ingrese un tamano para el vector: \");\n\tscanf(\"%d\", &tamano);\n\tint vector[tamano];\n\tllenar_vector(vector, tamano);\n}"
+            }
         }
     }
 ]
