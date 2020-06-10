@@ -55,8 +55,12 @@ export default class Steps extends Component {
         <Racket code={mod1.ejemplos(1, 'ciclos')}></Racket>
         <div className="Compare__text-area">
           <textarea id="steps" className="texts" disabled />
+          <div>
+            <textarea id="exp1" className="texts2" disabled />
+            <textarea id="expw" className="texts2" disabled />
+          </div>
           <a href="/" className="compiler__button">
-            Comparar
+              Comparar
           </a>
         </div>
         <C code={mod2.ejemplos(1, 'ciclos')}></C>

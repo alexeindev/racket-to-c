@@ -4,5 +4,6 @@
         "chrono": "c",
         "limits": "c",
         "vector": "c"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
