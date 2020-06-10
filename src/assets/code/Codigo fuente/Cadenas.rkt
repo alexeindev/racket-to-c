@@ -81,3 +81,39 @@
 )
 
 (contador)
+
+;Cree una programa en C, que permita determinar si una cadena
+;ingresada por el usuario es o no palíndromo. Un palíndromo es 
+;una palabra o frase que se lee igual en un sentido que en otro.
+(define (palindromo)
+    (printf "Escribe una cadena: ")
+    (define cadena1 (string-copy (read)))
+    (define cadena2 (make-string (string-length cadena1) #\a))
+    (define tam (- (string-length cadena1) 1))
+    (for ([i (in-range 0 (string-length cadena1) 1)])
+        (string-set! cadena2 tam (string-ref cadena1 i))
+        (set! tam (- tam 1))
+    )
+    (if (equal? cadena1 cadena2)
+        (printf "Es un palindromo.")
+        (printf "No es un palindromo.")
+    )
+)
+
+(palindromo)
+
+;Escriba un programa que lea dos cadenas, una para el nombre
+;y otra para el apodo de una persona, luego de leer, concatenar 
+;las dos cadenas en una sola y mostrar por consola.
+(define (concatenar)
+    (define nombre (string-copy ""))
+    (define apodo (string-copy ""))
+	(printf "Ingrese el nombre de la persona: ")
+	(set! nombre (read))
+	(printf "Apodo de ~a: " nombre)
+	(set! apodo (read))
+	(string-append nombre apodo)
+	(printf "\n\tLa cadena concatenada es: ~a" nombre)
+)
+
+(concatenar)

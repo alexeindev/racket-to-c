@@ -156,6 +156,58 @@
             }
         },
 
+        "cadenas":
+        {
+            "1" : 
+            {
+                "codigo": ";Cree en programa que capture una cadena y luego\n;convierta cada uno de los caracteres a letras mayúsculas.\n(define (cadena)\n\t(define cad \"\")\n\t(define cadMayus \"\")\n\t(printf \"Ingrese una cadena:  \")\n\t(set! cad (string-copy (read)))\n\t(set! cadMayus (string-upcase cad))\n\t(printf \"\\nLa cadena en mayusculas es: ~a\" cadMayus)\n)\n\n(cadena)"
+            },
+            "2" : 
+            {
+                "codigo": ";Construya un programa en racket que capture una cadena y almacene\n;en otra variable la cadena invertida.\n(define (reverse)\n\t(define cad \"\")\n\t(define cadReverse \"\")\n\t(printf \"Ingrese una cadena de caracteres: \")\n\t(set! cad (read))\n\t(deifne tam (string-length cad))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(string-copy! cadReverse tam (string-ref cad i))\n\t\t(set! tam (- tam 1))\n\t)\n\t(printf \"\\nCADENA INVERTIDA: \")\n\t(printf \"\\n~a\" cadReverse)\n)\n\n(reverse)"
+            },
+            "3" : 
+            {
+                "codigo": ";Cree un programa que analice cuantas letras may�suclas y \n;cuantas letras min�sculas tiene una cadena ingresada por\n;el usuario. Nota: Puede usar ciclos anidados y codigo ASCII.\n(define (cantidad)\n\t(define mayus 0)(define minus 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena: \")\n\t(set! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 65 90 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! mayus (+ mayus 1))\n\t\t\t)\n\t\t)\n\t\t(for ([j (in-range 97 122 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! minus (+ minus 1))\n\t\t\t)\n\t\t)\n\t)\n\t(printf \"\\nCantidad de Mayusculas: ~a.\" mayus)\n\t(printf \"\\nCantidad de Minusculas: ~a.\" minus)\n)\n\n(cantidad)"
+            },
+            "4" : 
+            {
+                "codigo": ";Cree un programa en Racket que reciba una cadena de m�ximo 20\n;caracteres escrita por el usuario, el programa debe contar\n;cuantos n�meros, y espacios en blanco contiene dicha cadena.\n;Nota: Una buena manera de realizar el ejercicio es usando el\n;c�digo ASCII\n(define (contador)\t(deinfe cantNums 0)(deinfe cantSpace 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena maximo de 20 caracteres: \")\n\t(string-copy! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 48 58 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! cantNums (+ cantNums 1))\n\t\t\t)\n\t\t)\n\t\t(if (= (char->integer (string-ref cad i)) 32)\n\t\t\t(set! cantSpace (+ cantSpace 1))\n\t\t)\n\t)\n\t(printf \"\\nLa Cadena ingresada tiene: \")\n\t(printf \"\\n%d valores numericos.\" cantNums)\n\t(printf \"\\n%d espacios en blanco. \" cantSpace)\n)\n\n(contador)"
+            },
+            "5" : 
+            {
+                "codigo": ";Cree una programa en C, que permita determinar si una cadena\n;ingresada por el usuario es o no palíndromo. Un palíndromo es \n;una palabra o frase que se lee igual en un sentido que en otro.\n(define (palindromo)\n\t(printf \"Escribe una cadena: \")\n\t(define cadena1 (string-copy (read)))\n\t(define cadena2 (make-string (string-length cadena1) #\\a))\n\t(define tam (- (string-length cadena1) 1))\n\t(for ([i (in-range 0 (string-length cadena1) 1)])\n\t\t(string-set! cadena2 tam (string-ref cadena1 i))\n\t\t(set! tam (- tam 1))\n\t)\n\t(if (equal? cadena1 cadena2)\n\t\t(printf \"Es un palindromo.\")\n\t\t(printf \"No es un palindromo.\")\n\t)\n)\n\n(palindromo)"
+            },
+            "6" : 
+            {
+                "codigo": ";Escriba un programa que lea dos cadenas, una para el nombre\n;y otra para el apodo de una persona, luego de leer, concatenar \n;las dos cadenas en una sola y mostrar por consola.\n(define (concatenar)\n\t(define nombre (string-copy \"\"))\n\t(define apodo (string-copy \"\"))\n\t(printf \"Ingrese el nombre de la persona: \")\n\t(set! nombre (read))\n\t(printf \"Apodo de ~a: \" nombre)\n\t(set! apodo (read))\n\t(string-append nombre apodo)\n\t(printf \"\\n\\tLa cadena concatenada es: ~a\" nombre)\n)\n\n(concatenar)"
+            },
+            "1b" : 
+            {
+                "codigo": "/*Cree en programa que capture una cadena y luego\nconvierta cada uno de los caracteres a letras may�sculas.*/\n#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\nint main(){\n\tint i, j;\n\tchar cadena[20];\n\tchar cadenaMayus[20];\n\tprintf(\"Ingrese una cadena:  \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tcadenaMayus[i] =toupper(cadena[i]);\n\t}\n\tprintf(\"\\nLa cadena en mayusculas es: %s\", cadenaMayus);\n}\n"
+            },
+            "2b" : 
+            {
+                "codigo": "/*Construya un programa en C que capture una cadena y almacene \nen otra variable la cadena invertida.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint i,tam;\n\tchar cadena[20];\n\tchar cadena_invertida[20]={};\n\tprintf(\"Ingrese una cadena de caracteres: \");\n\tgets(cadena);\n\ttam=strlen(cadena)-1;\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tcadena_invertida[tam]=cadena[i];\n\t\ttam--;\t}\n\tprintf(\"\\nCADENA INVERTIDA: \");\n\tprintf(\"\\n%s\", cadena_invertida);\n}\n"
+            },
+            "3b" : 
+            {
+                "codigo": "/*Cree un programa que analice cuantas letras may�suclas y \ncuantas letras min�sculas tiene una cadena ingresada por\nel usuario. Nota: Puede usar ciclos anidados y codigo ASCII.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint contador_mayus=0, contador_minus=0, j, i;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena: \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=65; j<=90; j++){\n\t\t\tif(cadena[i]==j)contador_mayus++;\n\t\t}\n\t\tfor(j=97; j<=122; j++){\n\t\t\tif(cadena[i]==j)contador_minus++;\n\t\t}\n\t}\n\tprintf(\"\\nCantidad de Mayusculas: %d.\", contador_mayus);\n\tprintf(\"\\nCantidad de Minusculas: %d.\", contador_minus);\n}\n"
+            },
+            "4b" : 
+            {
+                "codigo": "/*Cree un programa en C que reciba una cadena de m�ximo 20\ncaracteres escrita por el usuario, el programa debe contar\ncuantos n�meros, y espacios en blanco contiene dicha cadena.\nNota: Una buena manera de realizar el ejercicio es usando el\nc�digo ASCII*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint i,j, contador_numeros=0, contador_espacios=0;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena maximo de 20 caracteres: \");\n\tgets(cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=48; j<58; j++){\n\t\t\tif(cadena[i]==j){\n\t\t\t\tcontador_numeros++;\n\t\t\t}\n\t\t}\n\t\tif(cadena[i]==32){\n\t\t\tcontador_espacios++;\n\t\t}\n\t}\n\tprintf(\"\\nLa Cadena ingresada tiene: \");\n\tprintf(\"\\n%d valores numericos.\", contador_numeros);\n\tprintf(\"\\n%d espacios en blanco. \", contador_espacios);\n}\n"
+            },
+            "5b" : 
+            {
+                "codigo": "/*Cree una programa en C, que permita determinar si una cadena\ningresada por el usuario es o no palíndromo. Un palíndromo es \nuna palabra o frase que se lee igual en un sentido que en otro.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tprintf(\"Escribe una cadena: \");\n\tchar cadena1[20];\n\tgets(cadena1);\n\tchar cadena2[strlen(cadena1)];\n\tint tam=strlen(cadena1)-1;\n\tfor(int i=0; i<strlen(cadena1); i++) {\n\t\tcadena2[tam] = cadena1[i];\n\t\ttam--;\n\t}\n\tif (strcmp(cadena1, cadena2) == 0){\n\t\tprintf(\"\\nEs un palindromo.\\n\");\n\t}else printf(\"\\nNo es un palindromo.\\n\");\n}\n"
+            },
+            "6b" : 
+            {
+                "codigo": "/*Escriba un programa que lea dos cadenas, una para el nombre\ny otra para el apodo de una persona, luego de leer, concatenar \nlas dos cadenas en una sola y mostrar por consola.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tchar nombre[20];\n\tchar apodo[20];\n\tprintf(\"Ingrese el nombre de la persona: \");\n\tscanf(\"%s\", nombre);\n\tprintf(\"Apodo de %s: \", nombre);\n\tscanf(\"%s\", apodo);\n\tstrcat(nombre, apodo);\n\tprintf(\"\\n\\tLa cadena concatenada es: %s\", nombre);\n}\n"
+            }
+        },
+
         "vectores":
         {
             "1" : 
@@ -256,6 +308,58 @@
             "6b" : 
             {
                 "codigo": "/*Crear un programa que lleve la información acerca de los\nmodulos de un parqueadero. Un modulo tiene dos estados, libre\nu ocupado, usar un menú.\nCONSEJOS: Use una matriz las cuales tenga dos columnas, una \npara el modulo y otra para el estado de dicho modulo, usar \n0 o 1 para expresar el estado libre y ocupado respectivamente.*/\n#include<stdio.h>\n#include<stdlib.h>\nint main(){\n\tint i=0, filas=0, columnas=2, opcion=0, mod=0;\n\tprintf(\"Modulos del parqueadero: \");\n\tscanf(\"%d\", &filas);\n\tint parqueadero[filas][columnas];\n\tfor(i=0; i<filas; i++){\n\t\tparqueadero[i][1]=0;\n\t}\n\tdo{\n\t\tsystem(\"cls\");\n\t\tprintf(\"*Menu Parqueadero*\\n1. Ingresar un Vehiculo.\");\n\t\tprintf(\"\\n2. Salida Vehiculo.\\n3. Modulos libres y Ocupados.\");\n\t\tprintf(\"\\n4. Salir\\n\\n\\tDigite una opcion: \");\n\t\tscanf(\"%d\", &opcion);\n\t\tif(opcion==1){\n\t\t\tprintf(\"\\nIngrese el modulo donde va a parquear: \");\n\t\t\tscanf(\"%d\", &mod);\n\t\t\tparqueadero[mod-1][1]=1;\n\t\t\tsystem(\"pause\");\n\t\t}else if(opcion==2){\n\t\t\tprintf(\"\\nIngrese el modulo de donde sale el vehiculo: \");\n\t\t\tscanf(\"%d\", &mod);\n\t\t\tparqueadero[mod-1][1]=0;\n\t\t\tsystem(\"pause\");\n\t\t}else if(opcion==3){\n\t\t\tprintf(\"\\nModulos libres: \");\n\t\t\tfor(i=0; i<filas; i++){\n\t\t\t\tif(parqueadero[i][1]==0){\n\t\t\t\t\tprintf(\"\\n\\tModulo [%d]\", i+1);\n\t\t\t\t}\n\t\t\t}\n\t\t\tprintf(\"\\nModulos Ocupados: \");\n\t\t\tfor(i=0; i<filas; i++){\n\t\t\t\tif(parqueadero[i][1]==1){\n\t\t\t\t\tprintf(\"\\n\\tModulo [%d]\", i+1);\n\t\t\t\t}\n\t\t\t}\t\t\tsystem(\"pause\");\n\t\t}\n\t}while(opcion!=4);\n}\n"
+            }
+        },
+
+        "funciones":
+        {
+            "1" : 
+            {
+                "codigo": ";Cree una funcion que evalue si un n�mero es par o impar.\n(define (esperar n)\n\t(if (= (remainder n 2) 0)\n\t\t1\n\t\t0\n\t)\n)\n\n(define (main)\n\t(define numero 0)\n\t(printf \"Ingrese un numero: \")\n\t(set! numero (read))\n\t(if (= (esperar numero) 1)\n\t\t(printf \"\\nEl numero ingresado es Par. \")\n\t\t(printf \"\\nEl numero ingresado es Impar. \")\n\t)\n)\n\n(main)"
+            },
+            "2" : 
+            {
+                "codigo": ";Crear un programa que tenga una funci�n encargada de \n;aplicar descuento a un producto que este en venta.\n(define (descuento precio descuento)\n\t(define total 0)\n\t(if(and (> precio 0) (> descuento 0))\n\t\t(set! total (* precio(/ (- 100 descuento) 100)))\n\t)\n\ttotal\n)\n\n(define (main)\n\t(define precio 0) (define desc 0)\n\t(printf \"Ingrese el precio del producto: \")\n\t(set! precio (read))\n\t(printf \"Ingrese el descuento en porcentaje para el producto: \")\n\t(set! desc (read))\n\t(printf \"\\nEl precio final es: ~a\" (descuento precio desc))\n)\n\n(main)"
+            },
+            "3" : 
+            {
+                "codigo": ";Cree una funci�n que se encargue de devolver el m�ximo \n;valor de los valores ingresados en un vector de enteros \n;que el usuario digita.\n(define  (maximo vect N)\n\t(define mayor 0)\n\t(for ([i (in-range 0 N 1)])\n\t\t(if (< mayor (vector-ref vect i))\n\t\t\t(set! mayor (vector-ref vect i))\n\t\t\t(void)\n\t\t)\n\t)\n\tmayor\n)\n\n(define (main)\n\t(printf \"Ingrese la cantidad de enteros a guardar en el vector: \")\n\t(define N (read))\n\t(define vect ) \n\t(for ([i (in-range 0 N 1)])\n\t\t(printf \"Valor para la posicion [~a]: \" i+1)\n\t\t(vector-set! vect i (read))\n\t)\n\t(printf \"\\nEL VALOR MAXIMO ES: ~a\" (maximo vect N))\n)\n\n(main)"
+            },
+            "4" : 
+            {
+                "codigo": ";Cree un programa en Racket tenga un men� de opciones de una \n;calculadora deoperaciones matem�ticas basicas.\n(define (suma)\n\t(define a 0)(define b 0)\n\t(printf \"Numero a: \")\n\t(set! a (read))\n\t(printf \"\\nNumero b: \")\n\t(set! b (read))\n\t(+ a b)\n)\n\n(define (resta)\n\t(define a 0)(define b 0)\n\t(printf \"Numero a: \")\n\t(set! a (read))\n\t(printf \"\\nNumero b: \")\n\t(set! b (read))\n\t(- a b)\n)\n\n(define (multiplicacion)\n\t(define a 0)(define b 0)\n\t(printf \"Numero a: \")\n\t(set! a (read))\n\t(printf \"\\nNumero b: \")\n\t(set! b (read))\n\t(* a b)\n)\n\n(define (division)\n\t(define a 0)(define b 0)\n\t(printf \"Numero a: \")\n\t(set! a (read))\n\t(printf \"\\nNumero b: \")\n\t(set! b (read))\n\t(/ a b)\n)\n\n(define (main)\n\t(define opcion 0)\n\t(printf \"\\nCALCULADORA:\\n1. Suma.\\n2. Resta.\\n3. Multiplicacion\")\n\t(printf \"\\n4. Division..\\n5. Salir\\nOpcion: \")\n\t(set! opcion (read))\n\t(cond\n\t\t((= opcion 1) (printf \"\\nLa suma da como resultado: ~a\" \n\t\t\t(suma)))\n\t\t((= opcion 2) (printf \"\\nLa resta da como resultado: ~a\" \n\t\t\t(resta)))\n\t\t((= opcion 3) (printf \"\\nLa multiplicacion da como resultado: ~a\" \n\t\t\t(multiplicacion)))\n\t\t((= opcion 4) (printf \"\\nLa division da como resultado: ~a\" \n\t\t\t(division)))\n\t\t((= opcion 5) (printf \"Salir\"))\t\t(else (begin (printf \"ingrese una opcion valida.\") (main)))\n\t)\n)\n\n(main)"
+            },
+            "5" : 
+            {
+                "codigo": ";Cree una funci�n que utilice recursi�n para calcular el\n;factorial de un n�mero.\n(define (factorial n)\n\t(if(= n 0)\n\t\t1\n\t\t(if(= n 1)\n\t\t\t1\n\t\t\t(* n (factorial (- n 1)))\n\t\t)\n\t)\n)\n\n(define (main) \n\t(define numero 0)\n\t(printf \"Ingresa un numero para calcular su factorial: \")\n\t(set! numero (read))\n\t(printf \"\\nEl factorial del numero ~a es: ~a\" numero (factorial numero))\n)\n\n(main)"
+            },
+            "6" : 
+            {
+                "codigo": ";Escriba un programa que use funciones recursivas\n;el cual permita escribir la sucesi�n de Fibonacci.\n(define (fibonacci n)\n\t(if (= n 1)\n\t\t1\n\t\t(if (= n 2)\n\t\t\t1\n\t\t\t(+ (fibonacci (- n 1)) (fibonacci (- n 2)))\n\t\t)\n\t)\n)\n\n(define (main)\n\t(define limite 0)\n\t(printf \"Escriba el limite para la sucesion de fibonacci: \")\n\t(set! limite (read))\n\t(for ([i (in-range 0 limite 1)])\n\t\t(printf \"~a\\n\" (fibonacci i))\n\t)\n)\n\n(main)"
+            },
+            "1b" : 
+            {
+                "codigo": "/*Cree una funcion que evalue si un n�mero es par o impar.*/\n#include <stdio.h>\nint espar(int n){\n\tif(n%2==0){\n\t\treturn 1;\n\t}else return 0;\n}\n\nint main(){\n\tint numero;\n\tprintf(\"Ingrese un numero: \");\n\tscanf(\"%d\", &numero);\n\tif(espar(numero) == 1){\n\t\tprintf(\"\\nEl numero ingresado es Par. \");\n\t}else printf(\"\\nEl numero ingresado es Impar. \");\n}"
+            },
+            "2b" : 
+            {
+                "codigo": "/* Crear un programa que tenga una funci�n encargada de aplicar descuento a un producto que este en venta.*/#include <stdio.h>\nfloat descuento(float precio, float descuento){\n\tfloat total=0;\n\tif(precio>0 && descuento>0){\n\t\ttotal=precio*((100-descuento)/100);\n\t}\n\treturn total;\n}\n\nint main(){\n\tfloat precio=0, desc=0;\n\tprintf(\"Ingrese el precio del producto: \");\n\tscanf(\"%f\", &precio);\n\tprintf(\"Ingrese el descuento en porcentaje para el producto: \");\n\tscanf(\"%f\", &desc);\n\tprintf(\"\\n\tEl precio final es: %.2f\", descuento(precio, desc));\n}"
+            },
+            "3b" : 
+            {
+                "codigo": "/*Cree una funci�n que se encargue de devolver el m�ximo \nvalor de los valores ingresados en un vector de enteros \nque el usuario digita.*/\n#include <stdio.h>\nint maximo(int vector[], int N){\n \tint i, mayor=0;\n\tfor(i=0; i<N; i++){\n\t\tif(mayor<vector[i]){\n\t\t\tmayor=vector[i];\n\t\t}\n\t}\n\treturn mayor;\n}\n\nint main(){\n\tint N, i;\n\tprintf(\"Ingrese la cantidad de enteros a guardar en el vector: \");\n\tscanf(\"%d\", &N);\n\tint vector[N];\n\tfor(i=0; i<N; i++){\n\t\tprintf(\"Valor para la posicion [%d]: \", i+1);\n\t\tscanf(\"%d\", &vector[i]);\n\t}\n\tprintf(\"\\nEL VALOR MAXIMO ES: %d\", maximo(vector, N));\n}"
+            },
+            "4b" : 
+            {
+                "codigo": "/*Cree un programa en C tenga un men� de opciones de una \ncalculadora deoperaciones matem�ticas basicas.*/\n#include <stdio.h>\nint suma(){\n\tint a, b;\n\tprintf(\"Numero a: \");\n\tscanf(\"%d\", &a);\n\tprintf(\"\\nNumero b: \");\n\tscanf(\"%d\", &b);\nreturn a+b;\n}\n\nint resta(){\n\tint a, b;\n\tprintf(\"Numero a: \");\n\tscanf(\"%d\", &a);\n\tprintf(\"\\nNumero b: \");\n\tscanf(\"%d\", &b);\n\treturn a-b;\n}\n\nint multiplicacion(){\n\tint a, b;\n\tprintf(\"Numero a: \");\n\tscanf(\"%d\", &a);\n\tprintf(\"\\nNumero b: \");\n\tscanf(\"%d\", &b);\n\treturn a*b;\n}\n\nfloat division(){\n\tfloat a, b;\n\tprintf(\"Numero a: \");\n\tscanf(\"%f\", &a);\n\tprintf(\"\\nNumero b: \");\n\tscanf(\"%f\", &b);\n\treturn a/b;\n}\n\nint main(){\n\tint opcion;\n\tdo{\n\t\tprintf(\"\\nCALCULADORA:\\n1. Suma.\\n2. Resta.\\n3. Multiplicacion\");\n\t\tprintf(\"\\n4. Division..\\n5. Salir\\nOpcion: \");\n\t\tscanf(\"%d\", &opcion);\n\t\tswitch(opcion){\n\t\t\tcase 1: printf(\"\\nLa suma da como resultado: %d\", suma());\n\t\t\t\tbreak;\n\t\t\tcase 2: printf(\"\\nLa resta da como resultado: %d\",resta());\n\t\t\t\tbreak;\n\t\t\tcase 3: printf(\"\\nLa multiplicacion da como resultado: %d\",multiplicacion());\n\t\t\t\tbreak;\n\t\t\tcase 4: printf(\"\\nLa division da como resultado: %f\",division());\n\t\t\t\tbreak;\n\t\t\tdefault: printf(\"ingrese una opcion valida.\");\n\t\t}\n\t}while(opcion!=5);\n}"
+            },
+            "5b" : 
+            {
+                "codigo": "/*Cree una funci�n que utilice recursi�n para calcular el\nfactorial de un n�mero.*/\n#include <stdio.h>\nint factorial(int n) {\n\tif(n < 0) return 0;\n\telse if(n > 1) return n*factorial(n-1);\n\treturn 1;\n}\n\nint main() {\n\tint numero;\n\tprintf(\"Ingresa un numero para calcular su factorial: \");\n\tscanf(\"%d\", &numero);\n\tprintf(\"\\n\\nEl factorial del numero %d es: %d.\", numero, factorial(numero));\n}"
+            },
+            "6b" : 
+            {
+                "codigo": "/*Escriba un programa que use funciones recursivas \nel cual permita escribir la sucesi�n de Fibonacci.*/\n#include <stdio.h>\n#include <stdlib.h>\nint fibonacci(int n){\n\tif (n == 1){\n\t\treturn 1;\n\t}else if (n==2){\n\t\treturn 1;\n\t}else return fibonacci(n-1) + fibonacci(n-2);\n}\n\nint main(){\n\tint i, limite;\n\tprintf(\"Escriba el limite para la sucesion de fibonacci: \");\n\tscanf(\"%d\", &limite);\n\tfor (i=0; i<limite; i++){\n\t\tprintf(\"%d\\n\", fibonacci(i));\n\t}\n}"
             }
         }
     }

@@ -15,6 +15,7 @@ int main(){
 	}
 	printf("\nLa cadena en mayusculas es: %s", cadenaMayus);
 }
+
 /*Construya un programa en C que capture una cadena y almacene 
 en otra variable la cadena invertida.*/
 #include <stdio.h>
@@ -33,6 +34,7 @@ en otra variable la cadena invertida.*/
 	printf("\nCADENA INVERTIDA: ");
 	printf("\n%s", cadena_invertida);
  }
+
 /*Cree un programa que analice cuantas letras may�suclas y 
 cuantas letras min�sculas tiene una cadena ingresada por
 el usuario. Nota: Puede usar ciclos anidados y codigo ASCII.*/
@@ -55,6 +57,7 @@ int main(){
 	printf("\nCantidad de Minusculas: %d.", contador_minus);
 	
 }
+
 /*Cree un programa en C que reciba una cadena de m�ximo 20
 caracteres escrita por el usuario, el programa debe contar
 cuantos n�meros, y espacios en blanco contiene dicha cadena.
@@ -81,62 +84,39 @@ c�digo ASCII*/
 	printf("\n%d valores numericos.", contador_numeros);
 	printf("\n%d espacios en blanco. ", contador_espacios);
  }
-/*Cree una simulaci�n de una base de datos que guarde el 
-nombre de 3 personas, el programa debe pedir al usuario 
-ingresar los nombres. Adem�s se puede realizar busquedas 
-dentro de la base de datos.*/
 
+/*Cree una programa en C, que permita determinar si una cadena
+ingresada por el usuario es o no palíndromo. Un palíndromo es 
+una palabra o frase que se lee igual en un sentido que en otro.*/
 #include <stdio.h>
 #include <string.h>
-
 int main(){
-	char nombres[3][20], iguales, i, encontrado;
-	int buscar=1;
-	for(i=0; i<3; i++){
-		printf("Ingrese el nombre de la persona %d: ", i+1);
-		gets(nombres[i]);
-	}
-	char nombre_buscar[20];
-	printf("\n\nIngrese el nombre a buscar: ");
-	gets(nombre_buscar);
-	while(buscar==1){
-		for(i=0; i<3; i++){
-			iguales=strcmp(nombre_buscar, nombres[i]);
-			if(iguales==0){		
-				encontrado=1;
-				buscar=0;
-			}
-		}
-		buscar=0;
-	}
-	if(encontrado==1){
-		printf("El nombre esta en la base de datos. ");	
-	}else{
-		printf("El nombre NO esta en la base de datos. ");	
-	}
+    printf("Escribe una cadena: ");
+	char cadena1[20];
+    gets(cadena1);
+	char cadena2[strlen(cadena1)];
+    int tam=strlen(cadena1)-1;
+    for(int i=0; i<strlen(cadena1); i++) {
+        cadena2[tam] = cadena1[i];
+		tam--;
+    }
+    if (strcmp(cadena1, cadena2) == 0){
+		printf("\nEs un palindromo.\n");
+	}else printf("\nNo es un palindromo.\n");
 }
-/*Basandose en el ejemplo se simulaci�n de base de datos,
-cree un programa que capture nombre y c�digo de 3 estudiantes, 
-el usuario es quien llena la informaci�n, se debe validar la 
-condici�n de que no pueden haber dos c�digos iguales.*/
+
+/*Escriba un programa que lea dos cadenas, una para el nombre
+y otra para el apodo de una persona, luego de leer, concatenar 
+las dos cadenas en una sola y mostrar por consola.*/
 #include <stdio.h>
 #include <string.h>
 int main(){
-	int i, iguales;
-	char estudiantes[3][80];
-	char codigos[3][10];
-	for(i=0; i<3; i++){
-		printf("\n\nIngrese el nombre del estudiante # %d: ", i+1);
-		scanf("%s", estudiantes[i]);	
-		printf("Codigo del estudiante # %d: ", i+1);
-		scanf("%s", codigos[i]);
-		do{
-			iguales=strcmp(codigos[i-1], codigos[i]);
-			if(iguales==0){
-				printf("\nEl codigo ya esta en uso. ");
-				printf("\n\tCodigo del estudiante # %d: ", i+1);
-				scanf("%s", codigos[i]);
-			}
-		}while(iguales==0);
-	}
+	char nombre[20];
+	char apodo[20];
+	printf("Ingrese el nombre de la persona: ");
+	scanf("%s", nombre);
+	printf("Apodo de %s: ", nombre);
+	scanf("%s", apodo);
+	strcat(nombre, apodo);
+	printf("\n\tLa cadena concatenada es: %s", nombre);
 }
