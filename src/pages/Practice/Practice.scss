@@ -16,13 +16,12 @@
 
   &__content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-start;
+  }
 
-    div {
-      width: 50%;
-      text-align: left;
-    }
+  &__text {
+    text-align: left;
+    padding: 20px 0px;
   }
 }
