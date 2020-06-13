@@ -3,6 +3,8 @@ import './Practice.scss';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import Tabs from '../../components/Tabs/Tabs.jsx';
 import exercises from '../../assets/data/practicas.json';
+import Example from '../../components/TabCode/editores/EditorC';
+import Editor from '../../components/TabCode/editores/EditorRacket';
 
 function ejercicios(ejemplo, module) {
   var ejer;
@@ -27,13 +29,22 @@ function Practices(props) {
   const [currentActive, setCurrentActive] = useState(1);
   var name = dat.replace(':', '');
   const modul = name;
+
   return (
     <div className="Container">
       <Navbar mod={modul} />
       <div className="Practice">
         <h1 className="Practice__title">Herramienta de práctica</h1>
+        <Tabs
+          setCurrentActive={setCurrentActive}
+          currentActive={currentActive}
+          direction="row"
+          index={3}
+          type="Ejercicio"
+        />
         <div className="Practice__content">
           {/* Cambio en las tabs */}
+<<<<<<< HEAD
           <Tabs
             setCurrentActive={setCurrentActive}
             currentActive={currentActive}
@@ -42,6 +53,14 @@ function Practices(props) {
             type="Ejercicio"
           />
           {ejercicios(currentActive, modul)}
+=======
+          <div className="Practice__text">
+            {ejercicios(currentActive, modul)}
+          </div>
+          <div className="Practice__editor">
+            <Editor></Editor>
+          </div>
+>>>>>>> 25f64cefbde8c48045e832ef65b0043a653bc679
         </div>
       </div>
     </div>
