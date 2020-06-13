@@ -41,7 +41,7 @@ function Practices(props) {
             index={3}
             type="Ejercicio"
           />
-          <div>{ejercicios(currentActive, modul)}</div>
+          {ejercicios(currentActive, modul)}
         </div>
       </div>
     </div>

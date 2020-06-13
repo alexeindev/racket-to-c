@@ -52,6 +52,58 @@
             }
         },
 
+        "secuencia":
+        {
+            "1" : 
+            {
+                "codigo": ";Cree e inicialice con cualquier dato del mismo tipo:\n;-2 variables del tipo de dato entero.\n;-1 variable de tipo de dato char.\n;Una vez inicialidos todos los datos sume los dos enteros y \n;almacenelos en una variable.\n(define (main)\n\t(define variable1 0)(define  variable2 0)\n\t(set! variable1 5)\n\t(set! variable2 8)\n\t(define caracter \"h\")\n\t(define suma (+ variable1 variable2))\n)\n\n(main)"
+            },
+            "2" : 
+            {
+                "codigo": ";Cree un programa en Racket, que secuencialmente simule una llamada \n;telefonica. A partir de mensajes muestre como seria el proceso, \n;también capture el número que el usuario quiera marcar. Nota: \n;Para imprimir mensajes y recibir datos por pantalla se usa printf \n(define (llamada)\n\t(define  telefono 0)\n\t(printf \"*TELEFONO*\\n\")\n\t(printf \"\\nDescuelgue el telefono. \")\n\t(printf \"\\nIngrese el telefono a marcar: \")\n\t(set! telefono (read))\n\t(printf \"\\nProcesando\")\n\t(printf \"\\n\\nEsta marcando al numero: ~a\" telefono)\n\t(printf \"\\nConversacion en curso.\")\n\t(printf \"\\nPulse una tecla si desea finalizar la llamada.\")\n\t(printf \"\\nLLAMADA FINALIZADA\")\n)\n\n(llamada)"
+            },
+            "3" : 
+            {
+                "codigo": ";Capture un dato de tipo entero por consola, el programa debe \n;enviar un mensaje antes de capturar y luego de capturar el \n;número.\n;Recuerde: Para capturar un dato, se debe tener una variable del\n;tipo de dato que se desee, en este caso un entero.\n;Asi: Tipo_dato Nombre_variable;\n(define (TipoDato)\n\t(define numero 0)\n\t(printf \"***Vamos a ingresar el numero.***\")\n\t(printf \"\\nIngrese el numero: \")\n\t(set! numero (read))\n\t(printf \"\\n***El numero fue ingresado.***\")\n\t(printf \"\\nEl numero fue: ~a\" numero)\n)\n\n(TipoDato)"
+            },
+            "4" : 
+            {
+                "codigo": ";Cree un programa en racket que calcule el area de un triangulo,\n;de acuerdo a una base y una altura arrojada por el usuario.\n;Nota: Use variables de tipo flotante.\n(define (areaTriangulo)\n\t(define base 0)(define altura 0)(define area 0)\n\t(printf \"AREA DE UN TRIANGULO:\\nBASE: \")\n\t(set! base (read))\n\t(printf \"\\nALTURA: \")\n\t(set! altura (read))\n\t(set! area (/ (* base altura) 2))\n\t(printf \"\\n\\nEl area del triangulo es: ~a\" area)\n)\n\n(areaTriangulo)"
+            },
+            "5" : 
+            {
+                "codigo": ";Implemente un programa en Racket que calcule el volumen de un cilindro.\n;El usuario es quien digita el radio y altura de este.\n;Trabaje PI como una constante.\n;Nota: El volumen de un cilindro esta dado por: v=Pi*r^2*h.\n;*El volumen es igual a el número pi multiplicado por el cuadrado\n;del radio del cilindro y a su vez multiplicado por la altura del \n;cilindro.\n(define PI 3.1416)\n(define (volumenCilindro)\n\t(define r 0)(define h 0)\n\t(define v 0)\n\t(printf \"VOLUMEN DE UN CILINDRO:\\nRADIO: \")\n\t(set! r (read))\n\t(printf \"\\nALTURA: \")\n\t(set! h (read))\n\tv=PI*r*r*h\n\t(printf \"\\n\\nEl volumen del cilindro con radio ~a y altura ~a es: ~a\" r h v)\n)\n\n(volumenCilindro)"
+            },
+            "6" : 
+            {
+                "codigo": ";Con un programa en Racket, calcule la diagonal de un rectangulo que el \n;usuario sea quien define el tamaño de los lados.\n;Nota: La diagonal de un rectangulo esta dada por la raiz cuadrada\n;del la suma de sus dos lados al cuadrado. Por lo que necesitaremos\n;una libreria para las funciones matematicas. Esta libreria es math.h\n;contiene la función sqrt para la raiz cuadrada.\n(define (diagonalRactangulo)\n\t(define lado1 0)(define lado2 0)\n\t(define diagonal 0)\n\t(printf \"DIAGONAL DE UN RECTANGULO:\\nLADO 1: \")\n\t(set! lado1 (read))\n\t(printf \"LADO 2: \")\n\t(set! lado2 (read))\n\t(set! diagonal (sqrt (+ (* lado1 lado1) (* lado2 lado2))))\n\t(printf \"\\nLa diagonal para el rectangulo de lados ~ax~a es: ~a\" lado1 lado2 diagonal)\n)\n\n(diagonalRactangulo)"
+            },
+            "1b" : 
+            {
+                "codigo": "/*Cree e inicialice con cualquier dato del mismo tipo:\n-2 variables del tipo de dato entero.\n-1 variable de tipo de dato char.\nUna vez inicialidos todos los datos sume los dos enteros y\nalmacenelos en una variable.*/\nint main(){\n\tint variable1, variable2;\n\tvariable1=5;\n\tvariable2=8;\n\tchar caracter='h';\n\tint suma = variable1+variable2;\n}"
+            },
+            "2b" : 
+            {
+                "codigo": "/*Cree un programa en C, que secuencialmente simule una llamada\ntelefonica. A partir de mensajes muestre como seria el proceso,\ntambién capture el número que el usuario quiera marcar. Nota:\nPara imprimir mensajes y recibir datos por pantalla se usa printf\ny scanf respectivamente, funciones provenientes de la libreria \nstdio.h, dicha libreria debe ser importada.\nEn c se importan librerias asi:*/\n#include <stdio.h>\nint main(){\n\tlong telefono=0;\n\tprintf(\"*TELEFONO*\\n\");\n\tprintf(\"\\nDescuelgue el telefono. \");\n\tprintf(\"\\nIngrese el telefono a marcar: \");\n\tscanf(\"%ld\", &telefono);\n\tprintf(\"\\nProcesando\");\n\tprintf(\"\\n\\nEsta marcando al numero: %ld\", telefono);\n\tprintf(\"\\nConversacion en curso.\");\n\tprintf(\"\\nPulse una tecla si desea finalizar la llamada. \\n\");\n\tsystem(\"pause\");\n\tprintf(\"\\nLLAMADA FINALIZADA\");\n}"
+            },
+            "3b" : 
+            {
+                "codigo": "/*Capture un dato de tipo entero por consola, el programa debe\nenviar un mensaje antes de capturar y luego de capturar el \nnúmero.\nRecuerde: Para capturar un dato, se debe tener una variable del\ntipo de dato que se desee, en este caso un entero.\nAsi: Tipo_dato Nombre_variable;*/\n#include <stdio.h>\nint main(){\n\tint numero;\n\tprintf(\"***Vamos a ingresar el numero.***\");\n\tprintf(\"\\nIngrese el numero: \");\n\tscanf(\"%d\", &numero);\n\tprintf(\"\\n***El numero fue ingresado.***\");\n\tprintf(\"\\nEl numero fue: %d\", numero);\n}"
+            },
+            "4b" : 
+            {
+                "codigo": "/*Cree un programa en c que calcule el area de un triangulo, \nde acuerdo a una base y una altura arrojada por el usuario.\nNota: Use variables de tipo flotante.*/\n#include <stdio.h>\nint main(){\n\tfloat base=0, altura=0, area=0;\n\tprintf(\"AREA DE UN TRIANGULO:\\nBASE: \");\n\tscanf(\"%f\", &base);\n\tprintf(\"ALTURA: \");\n\tscanf(\"%f\", &altura);\n\tarea=(base*altura)/2;\n\tprintf(\"\\n\\nEl area del triangulo es: %.2f\", area);\n}"
+            },
+            "5b" : 
+            {
+                "codigo": "/*Implemente un programa en c que calcule el volumen de un cilindro.\nEl usuario es quien digita el radio y altura de este.\nTrabaje PI como una constante.\nNota: El volumen de un cilindro esta dado por: v=Pi*r^2*h.\n*El volumen es igual a el número pi multiplicado por el cuadrado\ndel radio del cilindro y a su vez multiplicado por la altura del \ncilindro.*/\n#include <stdio.h>\n#define PI 3.1416\nint main(){\n\tint r=0,h=0;\n\tfloat v;\n\tprintf(\"VOLUMEN DE UN CILINDRO:\\nRADIO: \");\n\tscanf(\"%d\", &r);\n\tprintf(\"ALTURA: \");\n\tscanf(\"%d\", &h);\n\tv=PI*r*r*h;\n\tprintf(\"\\n\\nEl volumen del cilindro con radio %d y altura %d es: %.2f\", r, h, v);\n}"
+            },
+            "6b" : 
+            {
+                "codigo": "/*Con un programa en c, calcule la diagonal de un rectangulo que el \nusuario sea quien define el tamaño de los lados.\nNota: La diagonal de un rectangulo esta dada por la raiz cuadrada\ndel la suma de sus dos lados al cuadrado. Por lo que necesitaremos\nuna libreria para las funciones matematicas. Esta libreria es math.h\ncontiene la función sqrt para la raiz cuadrada.*/\n#include <stdio.h>\n#include <math.h>\nint main(){\n\tint lado1=0, lado2=0;\n\tfloat diagonal=0;\n\tprintf(\"DIAGONAL DE UN RECTANGULO:\\nLADO 1: \");\n\tscanf(\"%d\", &lado1);\n\tprintf(\"LADO 2: \");\n\tscanf(\"%d\", &lado2);\n\tdiagonal=sqrt(lado1*lado1 + lado2*lado2);\n\tprintf(\"\\n\\nLa diagonal para el rectangulo de lados %dx%d es: %.2f\", lado1, lado2, diagonal);\n}"
+            }
+        },
+
         "condicionales":
         {
             "1" : 
@@ -168,11 +220,11 @@
             },
             "3" : 
             {
-                "codigo": ";Cree un programa que analice cuantas letras may�suclas y \n;cuantas letras min�sculas tiene una cadena ingresada por\n;el usuario. Nota: Puede usar ciclos anidados y codigo ASCII.\n(define (cantidad)\n\t(define mayus 0)(define minus 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena: \")\n\t(set! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 65 90 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! mayus (+ mayus 1))\n\t\t\t)\n\t\t)\n\t\t(for ([j (in-range 97 122 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! minus (+ minus 1))\n\t\t\t)\n\t\t)\n\t)\n\t(printf \"\\nCantidad de Mayusculas: ~a.\" mayus)\n\t(printf \"\\nCantidad de Minusculas: ~a.\" minus)\n)\n\n(cantidad)"
+                "codigo": ";Cree un programa que analice cuantas letras mayusculas y \n;cuantas letras minusculas tiene una cadena ingresada por\n;el usuario. Nota: Puede usar ciclos anidados y codigo ASCII.\n(define (cantidad)\n\t(define mayus 0)(define minus 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena: \")\n\t(set! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 65 90 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! mayus (+ mayus 1))\n\t\t\t)\n\t\t)\n\t\t(for ([j (in-range 97 122 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! minus (+ minus 1))\n\t\t\t)\n\t\t)\n\t)\n\t(printf \"\\nCantidad de Mayusculas: ~a.\" mayus)\n\t(printf \"\\nCantidad de Minusculas: ~a.\" minus)\n)\n\n(cantidad)"
             },
             "4" : 
             {
-                "codigo": ";Cree un programa en Racket que reciba una cadena de m�ximo 20\n;caracteres escrita por el usuario, el programa debe contar\n;cuantos n�meros, y espacios en blanco contiene dicha cadena.\n;Nota: Una buena manera de realizar el ejercicio es usando el\n;c�digo ASCII\n(define (contador)\t(deinfe cantNums 0)(deinfe cantSpace 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena maximo de 20 caracteres: \")\n\t(string-copy! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 48 58 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! cantNums (+ cantNums 1))\n\t\t\t)\n\t\t)\n\t\t(if (= (char->integer (string-ref cad i)) 32)\n\t\t\t(set! cantSpace (+ cantSpace 1))\n\t\t)\n\t)\n\t(printf \"\\nLa Cadena ingresada tiene: \")\n\t(printf \"\\n%d valores numericos.\" cantNums)\n\t(printf \"\\n%d espacios en blanco. \" cantSpace)\n)\n\n(contador)"
+                "codigo": ";Cree un programa en Racket que reciba una cadena de maximo 20\n;caracteres escrita por el usuario, el programa debe contar\n;cuantos numeros, y espacios en blanco contiene dicha cadena.\n;Nota: Una buena manera de realizar el ejercicio es usando el\n;codigo ASCII\n(define (contador)\t(deinfe cantNums 0)(deinfe cantSpace 0)\n\t(define cad \"\")\n\t(printf \"Ingrese una cadena maximo de 20 caracteres: \")\n\t(string-copy! cad (read))\n\t(for ([i (in-range 0 (string-length cad) 1)])\n\t\t(for ([j (in-range 48 58 1)])\n\t\t\t(if (= (char->integer (string-ref cad i)) j)\n\t\t\t\t(set! cantNums (+ cantNums 1))\n\t\t\t)\n\t\t)\n\t\t(if (= (char->integer (string-ref cad i)) 32)\n\t\t\t(set! cantSpace (+ cantSpace 1))\n\t\t)\n\t)\n\t(printf \"\\nLa Cadena ingresada tiene: \")\n\t(printf \"\\n%d valores numericos.\" cantNums)\n\t(printf \"\\n%d espacios en blanco. \" cantSpace)\n)\n\n(contador)"
             },
             "5" : 
             {
@@ -184,7 +236,7 @@
             },
             "1b" : 
             {
-                "codigo": "/*Cree en programa que capture una cadena y luego\nconvierta cada uno de los caracteres a letras may�sculas.*/\n#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\nint main(){\n\tint i, j;\n\tchar cadena[20];\n\tchar cadenaMayus[20];\n\tprintf(\"Ingrese una cadena:  \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tcadenaMayus[i] =toupper(cadena[i]);\n\t}\n\tprintf(\"\\nLa cadena en mayusculas es: %s\", cadenaMayus);\n}\n"
+                "codigo": "/*Cree en programa que capture una cadena y luego\nconvierta cada uno de los caracteres a letras mayusculas.*/\n#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\nint main(){\n\tint i, j;\n\tchar cadena[20];\n\tchar cadenaMayus[20];\n\tprintf(\"Ingrese una cadena:  \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tcadenaMayus[i] =toupper(cadena[i]);\n\t}\n\tprintf(\"\\nLa cadena en mayusculas es: %s\", cadenaMayus);\n}\n"
             },
             "2b" : 
             {
@@ -192,11 +244,11 @@
             },
             "3b" : 
             {
-                "codigo": "/*Cree un programa que analice cuantas letras may�suclas y \ncuantas letras min�sculas tiene una cadena ingresada por\nel usuario. Nota: Puede usar ciclos anidados y codigo ASCII.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint contador_mayus=0, contador_minus=0, j, i;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena: \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=65; j<=90; j++){\n\t\t\tif(cadena[i]==j)contador_mayus++;\n\t\t}\n\t\tfor(j=97; j<=122; j++){\n\t\t\tif(cadena[i]==j)contador_minus++;\n\t\t}\n\t}\n\tprintf(\"\\nCantidad de Mayusculas: %d.\", contador_mayus);\n\tprintf(\"\\nCantidad de Minusculas: %d.\", contador_minus);\n}\n"
+                "codigo": "/*Cree un programa que analice cuantas letras mayusculas y \ncuantas letras minusculas tiene una cadena ingresada por\nel usuario. Nota: Puede usar ciclos anidados y codigo ASCII.*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint contador_mayus=0, contador_minus=0, j, i;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena: \");\n\tscanf(\"%s\", cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=65; j<=90; j++){\n\t\t\tif(cadena[i]==j)contador_mayus++;\n\t\t}\n\t\tfor(j=97; j<=122; j++){\n\t\t\tif(cadena[i]==j)contador_minus++;\n\t\t}\n\t}\n\tprintf(\"\\nCantidad de Mayusculas: %d.\", contador_mayus);\n\tprintf(\"\\nCantidad de Minusculas: %d.\", contador_minus);\n}\n"
             },
             "4b" : 
             {
-                "codigo": "/*Cree un programa en C que reciba una cadena de m�ximo 20\ncaracteres escrita por el usuario, el programa debe contar\ncuantos n�meros, y espacios en blanco contiene dicha cadena.\nNota: Una buena manera de realizar el ejercicio es usando el\nc�digo ASCII*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint i,j, contador_numeros=0, contador_espacios=0;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena maximo de 20 caracteres: \");\n\tgets(cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=48; j<58; j++){\n\t\t\tif(cadena[i]==j){\n\t\t\t\tcontador_numeros++;\n\t\t\t}\n\t\t}\n\t\tif(cadena[i]==32){\n\t\t\tcontador_espacios++;\n\t\t}\n\t}\n\tprintf(\"\\nLa Cadena ingresada tiene: \");\n\tprintf(\"\\n%d valores numericos.\", contador_numeros);\n\tprintf(\"\\n%d espacios en blanco. \", contador_espacios);\n}\n"
+                "codigo": "/*Cree un programa en C que reciba una cadena de maximo 20\ncaracteres escrita por el usuario, el programa debe contar\ncuantos numeros, y espacios en blanco contiene dicha cadena.\nNota: Una buena manera de realizar el ejercicio es usando el\ncodigo ASCII*/\n#include <stdio.h>\n#include <string.h>\nint main(){\n\tint i,j, contador_numeros=0, contador_espacios=0;\n\tchar cadena[20];\n\tprintf(\"Ingrese una cadena maximo de 20 caracteres: \");\n\tgets(cadena);\n\tfor(i=0; i<strlen(cadena); i++){\n\t\tfor(j=48; j<58; j++){\n\t\t\tif(cadena[i]==j){\n\t\t\t\tcontador_numeros++;\n\t\t\t}\n\t\t}\n\t\tif(cadena[i]==32){\n\t\t\tcontador_espacios++;\n\t\t}\n\t}\n\tprintf(\"\\nLa Cadena ingresada tiene: \");\n\tprintf(\"\\n%d valores numericos.\", contador_numeros);\n\tprintf(\"\\n%d espacios en blanco. \", contador_espacios);\n}\n"
             },
             "5b" : 
             {
@@ -275,7 +327,7 @@
             },
             "4" : 
             {
-                "codigo": ";Crear un programa que simule una base de datos, que tenga\n;el nombre de una persona junto con su n�mero telefonico.\n(require math/matrix)\n(define (Database)\n\t(printf \"Personas a registrar en la base de datos: \")\n\t(define fil (read))\n\t(define nombres (make-matrix fil 50 0))\n\t(define numeros (make-matrix fil 12 0))\n\t(printf \"\\nLlenar la base de datos: \")\n\t(for ([i (in-range 0 fil 1)])\n\t\t(for ([j (in-range 0 2 1)])\n\t\t\t(printf \"\\nDigite el nombre de la persona ~a: \" i+1)\n\t\t\t(matrix-set nombres i j (read))\n\t\t\t(printf\"\\Numero de ~a: \" (matrix-ref nombres i j))\n\t\t\t(matrix-set numeros i j (read))\n\t\t)\n\t)\n\t(printf \"\\n***BASE DE DATOS: ***\\n\")\n\t(for ([i (in-range 0 fil 1)])\n\t\t(for ([j (in-range 0 2 1)])\n\t\t\t(printf \"\\nNombre: ~a | Telefono: ~a\" (matrix-ref nombres i j) (matrix-ref numeros i j))\n\t\t)\n\t)\n)\n\n(Database)\n"
+                "codigo": ";Crear un programa que simule una base de datos, que tenga\n;el nombre de una persona junto con su número telefonico.\n(require math/matrix)\n(define (Database)\n\t(printf \"Personas a registrar en la base de datos: \")\n\t(define fil (read))\n\t(define nombres (make-matrix fil 50 0))\n\t(define numeros (make-matrix fil 12 0))\n\t(printf \"\\nLlenar la base de datos: \")\n\t(for ([i (in-range 0 fil 1)])\n\t\t(for ([j (in-range 0 2 1)])\n\t\t\t(printf \"\\nDigite el nombre de la persona ~a: \" i+1)\n\t\t\t(matrix-set nombres i j (read))\n\t\t\t(printf\"\\Numero de ~a: \" (matrix-ref nombres i j))\n\t\t\t(matrix-set numeros i j (read))\n\t\t)\n\t)\n\t(printf \"\\n***BASE DE DATOS: ***\\n\")\n\t(for ([i (in-range 0 fil 1)])\n\t\t(for ([j (in-range 0 2 1)])\n\t\t\t(printf \"\\nNombre: ~a | Telefono: ~a\" (matrix-ref nombres i j) (matrix-ref numeros i j))\n\t\t)\n\t)\n)\n\n(Database)\n"
             },
             "5" : 
             {
@@ -299,7 +351,7 @@
             },
             "4b" : 
             {
-                "codigo": "/*Crear un programa que simule una base de datos, que tenga \nel nombre de una persona junto con su n�mero telefonico.*/\n#include<stdio.h>\nint main(){\n\tint i=0, filas=0; \n\tprintf(\"Personas a registrar en la base de datos: \");\n\tscanf(\"%d\", &filas);\n\tchar nombres[filas][50];\n\tchar numeros[filas][12];\n\tprintf(\"\\n\\nLlenar la base de datos:\");\n\tfor(i=0; i<filas; i++){\n\t\tprintf(\"\\n\\n\\tDigite el nombre de la persona %d: \", i+1);\n\t\tscanf(\"%s\",&nombres[i]);\n\t\tprintf(\"\\tNumero de %s: \", nombres[i]);\n\t\tscanf(\"%s\", &numeros[i]);\n\t}\n\tprintf(\"\\n***BASE DE DATOS: ***\\n\");\n\tfor(i=0; i<filas; i++){\n\t\tprintf(\"\\n\\tNombre: %s | Telefono: %s\", nombres[i], numeros[i]);\n\t}\n}\n"
+                "codigo": "/*Crear un programa que simule una base de datos, que tenga \nel nombre de una persona junto con su número telefonico.*/\n#include<stdio.h>\nint main(){\n\tint i=0, filas=0; \n\tprintf(\"Personas a registrar en la base de datos: \");\n\tscanf(\"%d\", &filas);\n\tchar nombres[filas][50];\n\tchar numeros[filas][12];\n\tprintf(\"\\n\\nLlenar la base de datos:\");\n\tfor(i=0; i<filas; i++){\n\t\tprintf(\"\\n\\n\\tDigite el nombre de la persona %d: \", i+1);\n\t\tscanf(\"%s\",&nombres[i]);\n\t\tprintf(\"\\tNumero de %s: \", nombres[i]);\n\t\tscanf(\"%s\", &numeros[i]);\n\t}\n\tprintf(\"\\n***BASE DE DATOS: ***\\n\");\n\tfor(i=0; i<filas; i++){\n\t\tprintf(\"\\n\\tNombre: %s | Telefono: %s\", nombres[i], numeros[i]);\n\t}\n}\n"
             },
             "5b" : 
             {
@@ -315,15 +367,15 @@
         {
             "1" : 
             {
-                "codigo": ";Cree una funcion que evalue si un n�mero es par o impar.\n(define (esperar n)\n\t(if (= (remainder n 2) 0)\n\t\t1\n\t\t0\n\t)\n)\n\n(define (main)\n\t(define numero 0)\n\t(printf \"Ingrese un numero: \")\n\t(set! numero (read))\n\t(if (= (esperar numero) 1)\n\t\t(printf \"\\nEl numero ingresado es Par. \")\n\t\t(printf \"\\nEl numero ingresado es Impar. \")\n\t)\n)\n\n(main)"
+                "codigo": ";Cree una funcion que evalue si un número es par o impar.\n(define (esperar n)\n\t(if (= (remainder n 2) 0)\n\t\t1\n\t\t0\n\t)\n)\n\n(define (main)\n\t(define numero 0)\n\t(printf \"Ingrese un numero: \")\n\t(set! numero (read))\n\t(if (= (esperar numero) 1)\n\t\t(printf \"\\nEl numero ingresado es Par. \")\n\t\t(printf \"\\nEl numero ingresado es Impar. \")\n\t)\n)\n\n(main)"
             },
             "2" : 
             {
-                "codigo": ";Crear un programa que tenga una funci�n encargada de \n;aplicar descuento a un producto que este en venta.\n(define (descuento precio descuento)\n\t(define total 0)\n\t(if(and (> precio 0) (> descuento 0))\n\t\t(set! total (* precio(/ (- 100 descuento) 100)))\n\t)\n\ttotal\n)\n\n(define (main)\n\t(define precio 0) (define desc 0)\n\t(printf \"Ingrese el precio del producto: \")\n\t(set! precio (read))\n\t(printf \"Ingrese el descuento en porcentaje para el producto: \")\n\t(set! desc (read))\n\t(printf \"\\nEl precio final es: ~a\" (descuento precio desc))\n)\n\n(main)"
+                "codigo": ";Crear un programa que tenga una función encargada de \n;aplicar descuento a un producto que este en venta.\n(define (descuento precio descuento)\n\t(define total 0)\n\t(if(and (> precio 0) (> descuento 0))\n\t\t(set! total (* precio(/ (- 100 descuento) 100)))\n\t)\n\ttotal\n)\n\n(define (main)\n\t(define precio 0) (define desc 0)\n\t(printf \"Ingrese el precio del producto: \")\n\t(set! precio (read))\n\t(printf \"Ingrese el descuento en porcentaje para el producto: \")\n\t(set! desc (read))\n\t(printf \"\\nEl precio final es: ~a\" (descuento precio desc))\n)\n\n(main)"
             },
             "3" : 
             {
-                "codigo": ";Cree una funci�n que se encargue de devolver el m�ximo \n;valor de los valores ingresados en un vector de enteros \n;que el usuario digita.\n(define  (maximo vect N)\n\t(define mayor 0)\n\t(for ([i (in-range 0 N 1)])\n\t\t(if (< mayor (vector-ref vect i))\n\t\t\t(set! mayor (vector-ref vect i))\n\t\t\t(void)\n\t\t)\n\t)\n\tmayor\n)\n\n(define (main)\n\t(printf \"Ingrese la cantidad de enteros a guardar en el vector: \")\n\t(define N (read))\n\t(define vect ) \n\t(for ([i (in-range 0 N 1)])\n\t\t(printf \"Valor para la posicion [~a]: \" i+1)\n\t\t(vector-set! vect i (read))\n\t)\n\t(printf \"\\nEL VALOR MAXIMO ES: ~a\" (maximo vect N))\n)\n\n(main)"
+                "codigo": ";Cree una función que se encargue de devolver el maximo \n;valor de los valores ingresados en un vector de enteros \n;que el usuario digita.\n(define  (maximo vect N)\n\t(define mayor 0)\n\t(for ([i (in-range 0 N 1)])\n\t\t(if (< mayor (vector-ref vect i))\n\t\t\t(set! mayor (vector-ref vect i))\n\t\t\t(void)\n\t\t)\n\t)\n\tmayor\n)\n\n(define (main)\n\t(printf \"Ingrese la cantidad de enteros a guardar en el vector: \")\n\t(define N (read))\n\t(define vect ) \n\t(for ([i (in-range 0 N 1)])\n\t\t(printf \"Valor para la posicion [~a]: \" i+1)\n\t\t(vector-set! vect i (read))\n\t)\n\t(printf \"\\nEL VALOR MAXIMO ES: ~a\" (maximo vect N))\n)\n\n(main)"
             },
             "4" : 
             {
@@ -331,7 +383,7 @@
             },
             "5" : 
             {
-                "codigo": ";Cree una funci�n que utilice recursi�n para calcular el\n;factorial de un n�mero.\n(define (factorial n)\n\t(if(= n 0)\n\t\t1\n\t\t(if(= n 1)\n\t\t\t1\n\t\t\t(* n (factorial (- n 1)))\n\t\t)\n\t)\n)\n\n(define (main) \n\t(define numero 0)\n\t(printf \"Ingresa un numero para calcular su factorial: \")\n\t(set! numero (read))\n\t(printf \"\\nEl factorial del numero ~a es: ~a\" numero (factorial numero))\n)\n\n(main)"
+                "codigo": ";Cree una función que utilice recursi�n para calcular el\n;factorial de un número.\n(define (factorial n)\n\t(if(= n 0)\n\t\t1\n\t\t(if(= n 1)\n\t\t\t1\n\t\t\t(* n (factorial (- n 1)))\n\t\t)\n\t)\n)\n\n(define (main) \n\t(define numero 0)\n\t(printf \"Ingresa un numero para calcular su factorial: \")\n\t(set! numero (read))\n\t(printf \"\\nEl factorial del numero ~a es: ~a\" numero (factorial numero))\n)\n\n(main)"
             },
             "6" : 
             {
@@ -339,15 +391,15 @@
             },
             "1b" : 
             {
-                "codigo": "/*Cree una funcion que evalue si un n�mero es par o impar.*/\n#include <stdio.h>\nint espar(int n){\n\tif(n%2==0){\n\t\treturn 1;\n\t}else return 0;\n}\n\nint main(){\n\tint numero;\n\tprintf(\"Ingrese un numero: \");\n\tscanf(\"%d\", &numero);\n\tif(espar(numero) == 1){\n\t\tprintf(\"\\nEl numero ingresado es Par. \");\n\t}else printf(\"\\nEl numero ingresado es Impar. \");\n}"
+                "codigo": "/*Cree una funcion que evalue si un número es par o impar.*/\n#include <stdio.h>\nint espar(int n){\n\tif(n%2==0){\n\t\treturn 1;\n\t}else return 0;\n}\n\nint main(){\n\tint numero;\n\tprintf(\"Ingrese un numero: \");\n\tscanf(\"%d\", &numero);\n\tif(espar(numero) == 1){\n\t\tprintf(\"\\nEl numero ingresado es Par. \");\n\t}else printf(\"\\nEl numero ingresado es Impar. \");\n}"
             },
             "2b" : 
             {
-                "codigo": "/* Crear un programa que tenga una funci�n encargada de aplicar descuento a un producto que este en venta.*/#include <stdio.h>\nfloat descuento(float precio, float descuento){\n\tfloat total=0;\n\tif(precio>0 && descuento>0){\n\t\ttotal=precio*((100-descuento)/100);\n\t}\n\treturn total;\n}\n\nint main(){\n\tfloat precio=0, desc=0;\n\tprintf(\"Ingrese el precio del producto: \");\n\tscanf(\"%f\", &precio);\n\tprintf(\"Ingrese el descuento en porcentaje para el producto: \");\n\tscanf(\"%f\", &desc);\n\tprintf(\"\\n\tEl precio final es: %.2f\", descuento(precio, desc));\n}"
+                "codigo": "/* Crear un programa que tenga una función encargada de aplicar descuento a un producto que este en venta.*/#include <stdio.h>\nfloat descuento(float precio, float descuento){\n\tfloat total=0;\n\tif(precio>0 && descuento>0){\n\t\ttotal=precio*((100-descuento)/100);\n\t}\n\treturn total;\n}\n\nint main(){\n\tfloat precio=0, desc=0;\n\tprintf(\"Ingrese el precio del producto: \");\n\tscanf(\"%f\", &precio);\n\tprintf(\"Ingrese el descuento en porcentaje para el producto: \");\n\tscanf(\"%f\", &desc);\n\tprintf(\"\\n\tEl precio final es: %.2f\", descuento(precio, desc));\n}"
             },
             "3b" : 
             {
-                "codigo": "/*Cree una funci�n que se encargue de devolver el m�ximo \nvalor de los valores ingresados en un vector de enteros \nque el usuario digita.*/\n#include <stdio.h>\nint maximo(int vector[], int N){\n \tint i, mayor=0;\n\tfor(i=0; i<N; i++){\n\t\tif(mayor<vector[i]){\n\t\t\tmayor=vector[i];\n\t\t}\n\t}\n\treturn mayor;\n}\n\nint main(){\n\tint N, i;\n\tprintf(\"Ingrese la cantidad de enteros a guardar en el vector: \");\n\tscanf(\"%d\", &N);\n\tint vector[N];\n\tfor(i=0; i<N; i++){\n\t\tprintf(\"Valor para la posicion [%d]: \", i+1);\n\t\tscanf(\"%d\", &vector[i]);\n\t}\n\tprintf(\"\\nEL VALOR MAXIMO ES: %d\", maximo(vector, N));\n}"
+                "codigo": "/*Cree una función que se encargue de devolver el maximo \nvalor de los valores ingresados en un vector de enteros \nque el usuario digita.*/\n#include <stdio.h>\nint maximo(int vector[], int N){\n \tint i, mayor=0;\n\tfor(i=0; i<N; i++){\n\t\tif(mayor<vector[i]){\n\t\t\tmayor=vector[i];\n\t\t}\n\t}\n\treturn mayor;\n}\n\nint main(){\n\tint N, i;\n\tprintf(\"Ingrese la cantidad de enteros a guardar en el vector: \");\n\tscanf(\"%d\", &N);\n\tint vector[N];\n\tfor(i=0; i<N; i++){\n\t\tprintf(\"Valor para la posicion [%d]: \", i+1);\n\t\tscanf(\"%d\", &vector[i]);\n\t}\n\tprintf(\"\\nEL VALOR MAXIMO ES: %d\", maximo(vector, N));\n}"
             },
             "4b" : 
             {
@@ -355,7 +407,7 @@
             },
             "5b" : 
             {
-                "codigo": "/*Cree una funci�n que utilice recursi�n para calcular el\nfactorial de un n�mero.*/\n#include <stdio.h>\nint factorial(int n) {\n\tif(n < 0) return 0;\n\telse if(n > 1) return n*factorial(n-1);\n\treturn 1;\n}\n\nint main() {\n\tint numero;\n\tprintf(\"Ingresa un numero para calcular su factorial: \");\n\tscanf(\"%d\", &numero);\n\tprintf(\"\\n\\nEl factorial del numero %d es: %d.\", numero, factorial(numero));\n}"
+                "codigo": "/*Cree una función que utilice recursi�n para calcular el\nfactorial de un número.*/\n#include <stdio.h>\nint factorial(int n) {\n\tif(n < 0) return 0;\n\telse if(n > 1) return n*factorial(n-1);\n\treturn 1;\n}\n\nint main() {\n\tint numero;\n\tprintf(\"Ingresa un numero para calcular su factorial: \");\n\tscanf(\"%d\", &numero);\n\tprintf(\"\\n\\nEl factorial del numero %d es: %d.\", numero, factorial(numero));\n}"
             },
             "6b" : 
             {
@@ -375,7 +427,7 @@
             },
             "3" : 
             {
-                "codigo": ";Crear un programa en Racket que contenga un procedimiento que\n;imprima un cuadrado de acuerdo a un caracter que se le\n;entrega junto con el tama�o de los lados de este.\n(define (cuadrado c lado)\n\t(for ([i (in-range 0 lado 1)])\n\t\t(for ([j (in-range 0 lado 1)])\n\t\t\t(printf \"~a \" c)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n\n(define (main)\n\t(define c 0)\n\t(define lado 0)\n\t(printf \"Ingrese un caracter para imprimir: \")\n\t(set! c (read))\n\t(printf \"Ingrese el tamano de los lados del cuadrado: \")\n\t(set! lado (read))\n\t(cuadrado c lado)\n)\n\n(main)"
+                "codigo": ";Crear un programa en Racket que contenga un procedimiento que\n;imprima un cuadrado de acuerdo a un caracter que se le\n;entrega junto con el tamaño de los lados de este.\n(define (cuadrado c lado)\n\t(for ([i (in-range 0 lado 1)])\n\t\t(for ([j (in-range 0 lado 1)])\n\t\t\t(printf \"~a \" c)\n\t\t)\n\t\t(printf \"\\n\")\n\t)\n)\n\n(define (main)\n\t(define c 0)\n\t(define lado 0)\n\t(printf \"Ingrese un caracter para imprimir: \")\n\t(set! c (read))\n\t(printf \"Ingrese el tamano de los lados del cuadrado: \")\n\t(set! lado (read))\n\t(cuadrado c lado)\n)\n\n(main)"
             },
             "4" : 
             {
@@ -399,7 +451,7 @@
             },
             "3b" : 
             {
-                "codigo": "/*Crear un programa en C que contenga un procedimiento que\nimprima un cuadrado de acuerdo a un caracter que se le \nentrega junto con el tama�o de los lados de este.*/\n#include <stdio.h>\nvoid cuadrado(char c, int lado){\n\tint i, j;\n\tfor(i=0; i<lado; i++){\n\t\tfor(j=0; j<lado; j++){\n\t\t\tprintf(\"%c\", c);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n\nint main(){\n\tchar c;\n\tint lado;\n\tprintf(\"Ingrese un caracter para imprimir: \");\n\tscanf(\"%c\", &c);\n\tprintf(\"Ingrese el tamano de los lados del cuadrado: \");\n\tscanf(\"%d\", &lado);\n\tcuadrado(c, lado);\n}"
+                "codigo": "/*Crear un programa en C que contenga un procedimiento que\nimprima un cuadrado de acuerdo a un caracter que se le \nentrega junto con el tamaño de los lados de este.*/\n#include <stdio.h>\nvoid cuadrado(char c, int lado){\n\tint i, j;\n\tfor(i=0; i<lado; i++){\n\t\tfor(j=0; j<lado; j++){\n\t\t\tprintf(\"%c\", c);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}\n\nint main(){\n\tchar c;\n\tint lado;\n\tprintf(\"Ingrese un caracter para imprimir: \");\n\tscanf(\"%c\", &c);\n\tprintf(\"Ingrese el tamano de los lados del cuadrado: \");\n\tscanf(\"%d\", &lado);\n\tcuadrado(c, lado);\n}"
             },
             "4b" : 
             {
