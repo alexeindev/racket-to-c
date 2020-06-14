@@ -4,10 +4,12 @@ import Steps from '../../components/Steps/Steps.jsx';
 
 export default class Comparsion extends Component {
   render() {
+    var modules = this.props.match.params.modules.replace(':', '');
+    modules = modules.replace('#', '');
     return (
       <div className="Container">
         <Navbar></Navbar>
-        <Steps></Steps>
+        <Steps module = {modules}></Steps>
       </div>
     );
   }

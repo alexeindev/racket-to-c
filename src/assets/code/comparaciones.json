@@ -40,7 +40,7 @@
             }
         },
 
-        "condicionales":
+        "secuencia":
         {
             "1" : 
             {
@@ -78,6 +78,46 @@
                 "2": "line 3: Se define la función.",
                 "3": "line 4: Se inicializa el for y se le da un rango."
             }
+        },
+
+        "condicionales":
+        {
+            "1" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "2" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "3" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "4" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "5" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "6" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            } 
         },
 
         "ciclos":
@@ -239,7 +279,87 @@
             }
         },
 
+        "estructuras":
+        {
+            "1" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "2" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "3" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "4" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "5" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "6" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            }
+        },
+
         "funciones":
+        {
+            "1" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "2" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "3" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "4" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "5" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            },
+            "6" : 
+            {
+                "1": "line 8: Se hace el llamado a la función (números)",
+                "2": "line 3: Se define la función.",
+                "3": "line 4: Se inicializa el for y se le da un rango."
+            }
+        },
+
+        "composicion":
         {
             "1" : 
             {
