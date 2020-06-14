@@ -128,7 +128,7 @@
 		(set! minuto (* minuto -1))
         (void)
 	)
-	printf("\n\nLa diferencia es de: ~a horas y ~a minutos." hora minuto)
+	(printf "\n\nLa diferencia es de: ~a horas y ~a minutos." hora minuto)
 )
 
 (main)
@@ -181,7 +181,7 @@
             )
         )
 	)
-	printf("\n\nIngrese la cedula de la persona a buscar: ")
+	(printf "\n\nIngrese la cedula de la persona a buscar: ")
 	(set! cedula_buscar (read))
 	(while(= buscar 0)
 		(for ([j (in-range 0 n_personas 1)])
