@@ -18,14 +18,14 @@ function Start() {
               Este sitio web tiene como objetivo ser un instrumento que sirva de
               apoyo a los estudiantes de la Universidad Tecnológica de Pereira
               para el aprendizaje del lenguaje de programación C++ a través de
-              conocimientos previos de Scheme, también conocido como Racket.En
+              conocimientos previos de Scheme, también conocido como Racket. En
               esta herramienta se podrán encontrar variedad de ejemplos con los
-              que el estudiante podrá mejorar su nivel de absteacción y obtener
+              que el estudiante podrá mejorar su nivel de abstracción y obtener
               el conocimiento de una manera práctica.
             </p>
             <h3 className="info__text--title">Información Adicional</h3>
             <p className="info__text--description">
-              Este sitio web cuenta con 11 modulos, cada modulo cuenta con
+              Este sitio web cuenta con 12 modulos, cada modulo cuenta con
               ejemplos practicos sobre determinados temas, el estudiante es
               libre de escoger a cual modulo quiere ingresar, nuestra
               recomendación es que antes de ingresar a un modulo, visite el
